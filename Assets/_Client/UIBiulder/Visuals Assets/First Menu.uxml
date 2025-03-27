@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
+    <ui:VisualElement style="flex-grow: 1; width: 1920px; height: 1081px; position: absolute; align-items: center; justify-content: center; background-color: rgb(0, 0, 0); top: -3px; left: 0;">
+        <ui:VisualElement style="flex-grow: 1; width: 1046px; height: 621px; position: absolute; bottom: 407px;" />
+        <ui:VisualElement name="ButtonsContext" style="flex-grow: 1; width: 335px; align-items: flex-start; justify-content: flex-start; position: absolute; height: 371px; top: 664px;">
+            <ui:Button text="Play" name="Play" class="menu-buttons menuButton" style="height: 118px;" />
+            <ui:Button text="Exit" name="Exit" class="menuButton" style="height: 112px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
