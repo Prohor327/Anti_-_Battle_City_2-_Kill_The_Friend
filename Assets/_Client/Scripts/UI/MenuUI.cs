@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Menu : UIElement
+public class MenuUI : UIElement
 {
     protected override void Initialize()
     {
@@ -11,7 +11,7 @@ public class Menu : UIElement
         Button play = _UIElement.Q<Button>("Play");
         Button exit = _UIElement.Q<Button>("Exit");
 
-        play.clicked += () => 
+        play.clicked += () => Game.Instance.gameMachine.LoadLevel();
         exit.clicked += () => Application.Quit();
     }
 

@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerControlPreset _controlPreset;
     [SerializeField] private TankMotor _tankMotor;
+    [SerializeField] private Weapon _weapon;
 
     private void Start()
     {
@@ -30,5 +31,11 @@ public class Player : MonoBehaviour
             tankDirection = Vector2.up;
         }
         _tankMotor.Move(tankDirection);
+
+        if(Input.GetKeyDown(_controlPreset.shoot))
+        {
+            _weapon.Attack(transform.rotation); 
+        }
+        _weapon.OnUpdate();
     }
 }

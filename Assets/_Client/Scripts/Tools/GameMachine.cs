@@ -1,19 +1,26 @@
-public class GameMachine : PersistentSingleton<GameMachine>
+public class GameMachine
 {
     public GameState state { get; private set; } = GameState.None;
 
     public void Initialize()    
     {
-        print("Game Machine Is Initializing");
+        Game.print("Game Machine Is Initializing");
         state = GameState.Bootstrap;
-        ScenesOpener.Instance.Initialize();
-        print("Game Machine Initialized");
+        Game.Instance.scenesOpener.Initialize();
+        Game.print("Game Machine Initialized");
     }
 
-    public void OpenMenu()
+    public void LoadMenu()
     {
-        print("Game Machine Is Opening Menu");
-        ScenesOpener.Instance.LoadMenu();
+        Game.print("Game Machine Is Opening Menu");
+        Game.Instance.scenesOpener.LoadMenu();
         state = GameState.Menu;
+    }
+
+    public void LoadLevel()
+    {
+        Game.print("Game Machine Is Loading Level");
+        Game.Instance.scenesOpener.LoadLevel();
+        state = GameState.Game;
     }
 }
