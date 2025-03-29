@@ -1,0 +1,5 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
+    <engine:Button text="1 vs 1" name="1vs1" class="menuButton" style="position: absolute;" />
+    <engine:Button text="Confrontation" name="Confrontation" class="menuButton" style="position: absolute; top: 120px; width: 626px;" />
+</engine:UXML>

@@ -14,17 +14,3 @@
     border-bottom-color: rgba(149, 149, 149, 0);
     -unity-font-definition: url("project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&guid=2fd9899cb5d228e47b12453ed5c2a2af&type=3#better-vcr4.0");
 }
-
-.menuButton {
-    width: 328px;
-    height: 79px;
-    background-color: rgba(188, 188, 188, 0);
-    -unity-text-align: middle-left;
-    font-size: 60px;
-    color: rgb(255, 255, 255);
-    border-left-color: rgba(149, 149, 149, 0);
-    border-right-color: rgba(149, 149, 149, 0);
-    border-top-color: rgba(149, 149, 149, 0);
-    border-bottom-color: rgba(149, 149, 149, 0);
-    -unity-font-definition: url("project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&guid=2fd9899cb5d228e47b12453ed5c2a2af&type=3#better-vcr4.0");
-}
