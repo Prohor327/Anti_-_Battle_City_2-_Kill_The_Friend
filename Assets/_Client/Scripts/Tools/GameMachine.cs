@@ -1,6 +1,10 @@
+using System;
+
 public class GameMachine
 {
     public GameState state { get; private set; } = GameState.None;
+
+    public Action OnLoadedLevel;
 
     public void Initialize()    
     {
