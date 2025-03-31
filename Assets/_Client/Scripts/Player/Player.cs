@@ -1,15 +1,8 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Unit
 {
     [SerializeField] private PlayerControlPreset _controlPreset;
-    [SerializeField] private TankMotor _tankMotor;
-    [SerializeField] private Weapon _weapon;
-
-    private void Start()
-    {
-        _tankMotor.Initialize(transform, GetComponent<Animator>());
-    }
 
     private void Update()
     {
@@ -30,12 +23,12 @@ public class Player : MonoBehaviour
         {
             tankDirection = Vector2.up;
         }
-        _tankMotor.Move(tankDirection);
+        tankMotor.Move(tankDirection);
 
         if(Input.GetKeyDown(_controlPreset.shoot))
         {
-            _weapon.Attack(transform.rotation); 
+            weapon.Attack(transform.rotation); 
         }
-        _weapon.OnUpdate();
+        weapon.OnUpdate();
     }
 }

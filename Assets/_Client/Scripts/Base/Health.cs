@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Unit : MonoBehaviour 
+public class Health : MonoBehaviour 
 {
     [SerializeField] private float _maxHealth;
     [SerializeField] private Explosion _explosion;

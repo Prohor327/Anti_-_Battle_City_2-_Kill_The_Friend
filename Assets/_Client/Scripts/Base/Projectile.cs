@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
             env.DestroyTile(_tilemapDetectorPoint.position);
             Instantiate(_miniExplosion, _tilemapDetectorPoint.position, Quaternion.identity);
         }
-        if(collision.TryGetComponent<Unit>(out Unit unit))
+        if(collision.TryGetComponent<Health>(out Health unit))
         {
             unit.TakeDamege(_damage);
         }
