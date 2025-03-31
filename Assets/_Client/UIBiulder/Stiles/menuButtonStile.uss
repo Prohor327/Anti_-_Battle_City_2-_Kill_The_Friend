@@ -1,6 +1,20 @@
 .unity-slider {
 }
 
+.menuButtonAnimation {
+    flex-grow: 1;
+    width: 62px;
+    position: absolute;
+    height: 65px;
+    left: -68px;
+    background-image: none;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 0s 0s;
+    transition-property: all background-image;
+    transition-delay: 0s 20ms;
+    top: 5px;
+}
+
 .menuButton {
     width: 328px;
     height: 79px;
@@ -13,4 +27,12 @@
     border-top-color: rgba(149, 149, 149, 0);
     border-bottom-color: rgba(149, 149, 149, 0);
     -unity-font-definition: url("project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&guid=2fd9899cb5d228e47b12453ed5c2a2af&type=3#better-vcr4.0");
+}
+
+.menuButtonAnimation1:hover {
+    background-repeat: repeat repeat;
+    background-color: rgb(0, 0, 0);
+    background-image: url("project://database/Assets/_Client/Sprites/sprite.png?fileID=-6330212380425479180&guid=845d578acbba4e943952d7dfb4467756&type=3#sprite_6");
+    transition-property: background-image, ignored;
+    transition-delay: 20ms, 0s;
 }

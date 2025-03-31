@@ -3,30 +3,22 @@ using UnityEngine.UIElements;
 
 public class MenuUI : UIElement
 {
-    [SerializeField] private VisualTreeAsset _menuButtonsVariantsAsset;
-    [SerializeField] private VisualTreeAsset _gameButtonsVariantsAsset;
-
-    private VisualElement _buttonCont;
-
-    private VisualElement _gameVariantsMenu;
-    private VisualElement _menuVariantsMenu;
+    private VisualElement _buttonCont2;
 
     protected override void Initialize()
     {
         base.Initialize();
-        _gameVariantsMenu = _gameButtonsVariantsAsset.CloneTree();
-        _menuVariantsMenu = _menuButtonsVariantsAsset.CloneTree();
 
-        _buttonCont = _UIElement.Q<VisualElement>("ButtonsCotext");
-        Button play = _menuVariantsMenu.Q<Button>("Play");
-        Button exit = _menuVariantsMenu.Q<Button>("Exit");
+        _buttonCont2 = _UIElement.Q<VisualElement>("ButtonsCotext2");
+        Button play = _UIElement.Q<Button>("Play");
+        Button exit = _UIElement.Q<Button>("Exit");
 
-        Button versus = _gameVariantsMenu.Q<Button>("1vs1");
-        Button confrontation = _gameVariantsMenu.Q<Button>("Confrontation");
+        Button confrontation = _UIElement.Q<Button>("Confrontation");
+        Button versus = _UIElement.Q<Button>("1vs1");
 
         play.clicked += ChooseGameVariant;
         exit.clicked += Application.Quit;
-        versus.clicked += () => Game.Instance.gameMachine.LoadLevel();
+        confrontation.clicked += () => Game.Instance.gameMachine.LoadLevel();
         
         Open();
     }
@@ -34,13 +26,11 @@ public class MenuUI : UIElement
     public override void Open()
     {
         base.Open();
-        _buttonCont.Add(_menuVariantsMenu);
-        
+        _buttonCont2.visible = false;
     }
 
     private void ChooseGameVariant()
     {
-        _buttonCont.Clear();
-        _buttonCont.Add(_gameVariantsMenu);
+        _buttonCont2.visible = true;
     }
 }
