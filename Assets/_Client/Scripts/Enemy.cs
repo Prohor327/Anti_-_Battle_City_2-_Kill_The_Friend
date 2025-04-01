@@ -2,21 +2,36 @@ using UnityEngine;
 
 public class Enemy : Unit 
 {
-    [SerializeField] private float _detectedWallsLength;
+    [SerializeField] private float _rateChangeDirection;
 
-    private void OnDrawGizmos()
-    {
-        Debug.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y + _detectedWallsLength, transform.position.z), Color.red, 0.1f);       
-        Debug.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - _detectedWallsLength, transform.position.z), Color.red, 0.1f);       
-        Debug.DrawLine(transform.position, new Vector3(transform.position.x + _detectedWallsLength, transform.position.y, transform.position.z), Color.red, 0.1f);       
-        Debug.DrawLine(transform.position, new Vector3(transform.position.x - _detectedWallsLength, transform.position.y, transform.position.z), Color.red, 0.1f);       
-    }
-
+    private float _currentTime;
+    private Vector2 direction;
+    
     private void Update()
     {
-
-        //tankMotor.Move()
-        //weapon.Attack(transform.rotation);
-        //weapon.OnUpdate();
+        _currentTime += Time.deltaTime;
+        if(_currentTime >= _rateChangeDirection)
+        {
+            int i = Random.Range(1, 5);
+            switch (i)
+            {
+                case(1):
+                direction = Vector2.up;
+                break;
+                case(2):
+                direction = Vector2.right;
+                break;
+                case(3):
+                direction = Vector2.left;
+                break;
+                case(4):
+                direction = Vector2.down;
+                break;
+            }
+            _currentTime = 0;
+        }
+        tankMotor.Move(direction);
+        weapon.Attack(transform.rotation);
+        weapon.OnUpdate();
     }  
 }

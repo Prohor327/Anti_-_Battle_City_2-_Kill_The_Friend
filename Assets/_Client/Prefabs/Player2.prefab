@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2999458065603136030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1312861061057710440}
   - component: {fileID: 8808485507800151016}
   - component: {fileID: 3904645232165215041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
     _speed: 2
   weapon:
     _bulletSpawnPoint: {fileID: 2999458065603136030}
-    _rate: 0.2
+    _rate: 0.4
     _projectile: {fileID: 1218621113378359738, guid: ddf3e2e98f8a01c4e85b433f850c8d01, type: 3}
   _controlPreset:
     <moveUp>k__BackingField: 273
@@ -242,7 +242,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &3904645232165215041
 MonoBehaviour:
   m_ObjectHideFlags: 0

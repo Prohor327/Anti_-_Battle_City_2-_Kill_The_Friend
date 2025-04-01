@@ -6,7 +6,7 @@ public class TankSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        Instantiate(_tank.gameObject, transform.position, Quaternion.identity);
+        Instantiate(_tank.gameObject, transform.position, transform.rotation);
     }
 
     public void End()
