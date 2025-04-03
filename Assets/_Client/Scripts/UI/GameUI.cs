@@ -16,10 +16,13 @@ public class GameUI : UIElement
         _expPlayer2 = _UIElement.Q<VisualElement>("ExperiencePlayer2");
         _hpPlayer1 = _UIElement.Q<VisualElement>("HPPlayer1");
         _hpPlayer2 = _UIElement.Q<VisualElement>("HPPlayer2");
+
+        Game.Instance.gameMachine.OnLoadedLevel += Open;
     }
 
     public override void Open()
     {
+        
         base.Open();
     }
 

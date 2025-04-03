@@ -25,6 +25,7 @@ public class GameMachine
     {
         Game.print("Game Machine Is Loading Level");
         Game.Instance.scenesOpener.LoadLevel();
+        OnLoadedLevel?.Invoke();
         state = GameState.Game;
     }
 }
