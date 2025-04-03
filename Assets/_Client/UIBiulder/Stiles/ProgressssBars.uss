@@ -1,0 +1,50 @@
+.ExpBarBackground .unity-progress-bar__background {
+    flex-grow: 1;
+    position: absolute;
+    height: 50px;
+    width: 1050px;
+    background-color: rgb(20, 41, 188);
+    border-left-color: rgb(0, 136, 255);
+    border-right-color: rgb(0, 136, 255);
+    border-top-color: rgb(0, 136, 255);
+    border-bottom-color: rgb(0, 136, 255);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    text-shadow: 0 0 0.2px rgba(0, 0, 0, 0);
+    rotate: -90deg;
+}
+
+.expBarValue .unity-progress-bar__progress {
+    flex-grow: 1;
+    background-color: rgb(17, 202, 233);
+    height: 42px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.hpBarBackground .unity-progress-bar__background {
+    flex-grow: 1;
+    position: absolute;
+    height: 59px;
+    width: 616px;
+    background-color: rgb(51, 0, 0);
+    border-left-color: rgb(185, 35, 22);
+    border-right-color: rgb(185, 35, 22);
+    border-top-color: rgb(185, 35, 22);
+    border-bottom-color: rgb(185, 35, 22);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.hpBarValue .unity-progress-bar__progress {
+    flex-grow: 1;
+    height: 94%;
+    background-color: rgb(233, 65, 17);
+}
