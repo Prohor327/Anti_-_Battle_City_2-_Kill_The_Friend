@@ -36,3 +36,13 @@
     transition-property: background-image, ignored;
     transition-delay: 20ms, 0s;
 }
+
+.text {
+    -unity-font-definition: url("project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&guid=2fd9899cb5d228e47b12453ed5c2a2af&type=3#better-vcr4.0");
+    height: 89px;
+    width: 252px;
+    font-size: 44px;
+    color: rgb(247, 255, 0);
+    -unity-text-align: upper-center;
+    left: 92px;
+}

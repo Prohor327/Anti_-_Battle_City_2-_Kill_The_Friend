@@ -48,3 +48,7 @@
     height: 94%;
     background-color: rgb(233, 65, 17);
 }
+
+.mirrowTextForBars .unity-progress-bar__title {
+    rotate: 180deg;
+}
