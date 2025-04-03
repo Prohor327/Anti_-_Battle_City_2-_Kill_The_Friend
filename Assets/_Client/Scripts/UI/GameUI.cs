@@ -22,7 +22,6 @@ public class GameUI : UIElement
 
     public override void Open()
     {
-        
         base.Open();
     }
 
