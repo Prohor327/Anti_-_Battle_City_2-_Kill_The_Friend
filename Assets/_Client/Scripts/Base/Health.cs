@@ -1,38 +1,38 @@
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public class Health : MonoBehaviour 
 {
-    [SerializeField] private float _maxHealth;
+    [SerializeField] protected float maxHealth;
     [SerializeField] private Explosion _explosion;
 
-    private float _health;
+    protected float health = 0;
 
     private void Start()
     {
-        _health = _maxHealth;
+        Heal(maxHealth);
     }
 
-    public void TakeDamege(float damage)
+    public virtual void TakeDamege(float damage)
     {
-        _health -= damage;
-        if(_health <= 0)
+        health -= damage;
+        if(health <= 0)
         {
-            Die();
+            GetComponent<Unit>().Die();
         }
     }    
 
-    public void Heal(float points)
+    public virtual void Heal(float points)
     {
-        _health += points;
-        if(_health >= _maxHealth)
+        health += points;
+        if(health >= maxHealth)
         {
-            _health = _maxHealth;
+            health = maxHealth;
         }
     }
 
-    private void Die()
+    public virtual void ImproveMaxHealth(float points)
     {
-        Instantiate(_explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        maxHealth += points;
     }
 }

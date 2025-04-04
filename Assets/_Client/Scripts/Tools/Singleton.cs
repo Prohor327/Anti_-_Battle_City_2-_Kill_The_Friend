@@ -32,5 +32,5 @@ using UnityEngine;
         {
             base.Awake();
             DontDestroyOnLoad(gameObject);
+        }
     }
-}

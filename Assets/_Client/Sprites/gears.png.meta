@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: ef2d28b5fc397e747a9f9be76aadea24
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7121309101972749489
+    second: gears_0
+  - first:
+      213: 3394653240272682139
+    second: gears_1
+  - first:
+      213: 6324380982363126411
+    second: gears_2
+  - first:
+      213: -8380146599018834487
+    second: gears_3
+  - first:
+      213: -439257461312874013
+    second: gears_4
+  - first:
+      213: -3266794490219690332
+    second: gears_5
+  - first:
+      213: 5136556717885964215
+    second: gears_6
+  - first:
+      213: 2337133857196690977
+    second: gears_7
+  - first:
+      213: -7439797651368368550
+    second: gears_8
+  - first:
+      213: 7826581775003789149
+    second: gears_9
+  - first:
+      213: -4113440361129390134
+    second: gears_10
+  - first:
+      213: -9151930016882155256
+    second: gears_11
+  - first:
+      213: 5718131952004097902
+    second: gears_12
+  - first:
+      213: -584727362367928733
+    second: gears_13
+  - first:
+      213: -7011568140996195386
+    second: gears_14
+  - first:
+      213: 6221437193890713375
+    second: gears_15
+  - first:
+      213: 3436912756386562802
+    second: gears_16
+  - first:
+      213: 3076090285369644158
+    second: gears_17
+  - first:
+      213: -4406231313216667679
+    second: gears_18
+  - first:
+      213: -7154645976320793485
+    second: gears_19
+  - first:
+      213: -3570610035154280070
+    second: gears_20
+  - first:
+      213: -7052611061462543177
+    second: gears_21
+  - first:
+      213: -3923665301320216893
+    second: gears_22
+  - first:
+      213: -8816021660916106838
+    second: gears_23
+  - first:
+      213: -6665706165330211905
+    second: gears_24
+  - first:
+      213: -5267488666351926915
+    second: gears_25
+  - first:
+      213: -3434397444246148880
+    second: gears_26
+  - first:
+      213: 1045045919667453489
+    second: gears_27
+  - first:
+      213: -489321168205231439
+    second: gears_28
+  - first:
+      213: -8885522292079263255
+    second: gears_29
+  - first:
+      213: 4910961996996613996
+    second: gears_30
+  - first:
+      213: 1733597911621675088
+    second: gears_31
+  - first:
+      213: 4895229980021282011
+    second: gears_32
+  - first:
+      213: -8937436531512550227
+    second: gears_33
+  - first:
+      213: -3944337537373540985
+    second: gears_34
+  - first:
+      213: -619441764350248280
+    second: gears_35
+  - first:
+      213: 2122726992644561985
+    second: gears_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gears_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4388212a170c2d90800000000000000
+      internalID: -7121309101972749489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gears_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9cf41ae22b3c1f20800000000000000
+      internalID: 3394653240272682139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gears_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a7df5def6b4c750800000000000000
+      internalID: 6324380982363126411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 78bff1451cff56646a26c47c1671651a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gears_0: -7121309101972749489
+      gears_1: 3394653240272682139
+      gears_2: 6324380982363126411
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

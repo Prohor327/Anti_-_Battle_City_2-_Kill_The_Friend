@@ -7,3 +7,11 @@ public enum GameState
     Game,
     Pause,
 }
+
+public enum AbillityType
+{
+    HPUp,
+    DamageUp,
+    SpeedUp,
+    ProjectileSpeedUp
+}

@@ -1,8 +1,29 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : Unit
 {
+    [SerializeField] [Range(1, 2)] private int _playerId;
     [SerializeField] private PlayerControlPreset _controlPreset;
+    [SerializeField] private List<AbillitySO> _freeAbilities;
+
+    public Health health { get; private set; }
+
+    protected override void Start()
+    {
+        base.Start();
+        if(_playerId == 1)
+        {
+            Game.Instance.player1 = this;
+        }
+        else if(_playerId == 2)
+        {
+            Game.Instance.player2 = this;
+        }
+
+        health = GetComponent<Health>();
+    }
 
     private void Update()
     {
@@ -30,5 +51,30 @@ public class Player : Unit
             weapon.Attack(transform.rotation); 
         }
         weapon.OnUpdate();
+    }
+
+    private void OnDisable()
+    {
+        if(_playerId == 1)
+        {
+            Game.Instance.player1 = null;
+        }
+        else if(_playerId == 2)
+        {
+            Game.Instance.player2 = null;
+        }       
+    }
+
+    public bool TryGetRandomAbility(out AbillitySO abillitySO)
+    {
+        abillitySO = null;
+        if(!_freeAbilities.Any())
+        {
+            return false;
+        }
+
+        abillitySO = _freeAbilities[Random.Range(0, _freeAbilities.Count)];
+        _freeAbilities.Remove(abillitySO);
+        return true;
     }
 }

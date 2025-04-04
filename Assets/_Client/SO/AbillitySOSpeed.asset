@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752900e05f997fd4b8dd970f9e2aa782, type: 3}
+  m_Name: AbillitySOSpeed
+  m_EditorClassIdentifier: 
+  <abillityType>k__BackingField: 2
+  <value>k__BackingField: 1
+  <description>k__BackingField: Speed Up
+  <texture>k__BackingField: {fileID: 2800000, guid: 27b35aae57cc53c47ba65468f66b5bae, type: 3}

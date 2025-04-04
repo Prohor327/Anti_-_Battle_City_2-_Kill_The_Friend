@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4297505180191379928}
   - component: {fileID: 1312861061057710440}
   - component: {fileID: 8808485507800151016}
-  - component: {fileID: 3904645232165215041}
+  - component: {fileID: -5269835687041437818}
   m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
@@ -164,12 +164,17 @@ MonoBehaviour:
     _bulletSpawnPoint: {fileID: 2999458065603136030}
     _rate: 0.4
     _projectile: {fileID: 1218621113378359738, guid: ddf3e2e98f8a01c4e85b433f850c8d01, type: 3}
+  _playerId: 2
   _controlPreset:
     <moveUp>k__BackingField: 273
     <moveLeft>k__BackingField: 276
     <moveRight>k__BackingField: 275
     <moveDown>k__BackingField: 274
     <shoot>k__BackingField: 13
+  _freeAbilities:
+  - {fileID: 11400000, guid: 7a925bf9567a4ff48af53a93b266c38f, type: 2}
+  - {fileID: 11400000, guid: ab6b8841a3c10654baa5f66b87408c5b, type: 2}
+  - {fileID: 11400000, guid: cefef0972c73f1243a0649068948aefa, type: 2}
 --- !u!61 &1312861061057710440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -243,7 +248,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3904645232165215041
+--- !u!114 &-5269835687041437818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,8 +257,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8234536480856398166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 733156a65c887354fa93fde71f78371c, type: 3}
+  m_Script: {fileID: 11500000, guid: df4ab6becd5d91e4a947972ea249fa92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  maxHealth: 100
   _explosion: {fileID: 7271265341917381814, guid: a812cf35828acf84b86cc79afa39b6d1, type: 3}
+  _playerId: 2
