@@ -6,7 +6,7 @@ public class PlayerCollector : MonoBehaviour
     {
         if(TryGetComponent<Gear>(out Gear gear))
         {
-            gear.Run();
+            //gear.Run();
         }
     }
 }

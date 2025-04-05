@@ -24,6 +24,16 @@ public class UIElement : MonoBehaviour
     public virtual void Open()
     {
         _document.Clear();
+        AddElement();
+    }
+
+    protected void AddElement()
+    {
         _document.Add(_UIElement);
+    }
+
+    protected void RemoveComponent()
+    {
+        _document.Remove(_UIElement);
     }
 }

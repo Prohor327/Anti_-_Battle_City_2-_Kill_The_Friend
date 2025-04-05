@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
+    <engine:VisualElement style="flex-grow: 1; background-color: rgba(101, 101, 101, 0.71); height: 413px; width: 582px; position: absolute; align-items: center; justify-content: flex-start; align-self: center; top: 326px; left: 669px;">
+        <engine:Label text="Pause" class="text" style="-unity-font-definition: url(&quot;project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&amp;guid=2fd9899cb5d228e47b12453ed5c2a2af&amp;type=3#better-vcr4.0&quot;); -unity-text-align: middle-center; white-space: pre-wrap; font-size: 47px; top: 21px; color: rgb(255, 255, 255); left: 0;" />
+        <engine:Button name="Continue" class="menuButton buttonBackround buttonBackroundFocus" style="width: 460px; position: absolute; top: 162px; left: 50px; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
+            <engine:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus">
+                <engine:Label text="Continue" name="Label" class="text" style="position: absolute; top: -29px; left: -39px; height: 117px; width: 429px;" />
+            </engine:VisualElement>
+        </engine:Button>
+    </engine:VisualElement>
+</engine:UXML>
