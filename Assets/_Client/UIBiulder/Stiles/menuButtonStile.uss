@@ -1,9 +1,10 @@
 .menuButtonAnimation {
-    left: 48px;
-    top: 32px;
-    height: 71px;
-    width: 80px;
+    height: 150px;
+    width: 150px;
     overflow: visible;
+    position: absolute;
+    left: -160px;
+    top: 0;
 }
 
 .menuButtonAnimation1:hover {
@@ -34,4 +35,5 @@
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     left: 92px;
+    overflow: hidden;
 }
