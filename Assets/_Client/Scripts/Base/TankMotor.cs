@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public class TankMotor
 {
-    [SerializeField] private float _speed;
+    public float speed;
 
     private Transform _movableTransform;
     private Quaternion _rot;
@@ -50,7 +50,7 @@ public class TankMotor
             _rot = Quaternion.Euler(0, 0, 180);
         }
         _movableTransform.rotation = _rot;
-        _movableTransform.position += new Vector3(normalizedDirection.x * _speed * Time.deltaTime, normalizedDirection.y * _speed * Time.deltaTime, 0);
+        _movableTransform.position += new Vector3(normalizedDirection.x * speed * Time.deltaTime, normalizedDirection.y * speed * Time.deltaTime, 0);
         _previousDirection = normalizedDirection;
     } 
 }

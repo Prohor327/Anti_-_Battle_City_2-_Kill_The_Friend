@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d104de7e1b033489094e70d4107c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
-  _speed: 10
+  <_damage>k__BackingField: 10
+  <_speed>k__BackingField: 5
   _lifeTime: 5
   _tilemapDetectorPoints:
   - {fileID: 5699252155647380842}
@@ -179,6 +179,7 @@ MonoBehaviour:
   - {fileID: 6644923156386322937}
   - {fileID: 6429958519604210436}
   _miniExplosion: {fileID: 4560913573356651176, guid: 5c81adf3d868a1647978c5ad354ec5d4, type: 3}
+  _myUnit: {fileID: 0}
 --- !u!50 &-8699862679191847960
 Rigidbody2D:
   serializedVersion: 5

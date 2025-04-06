@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752900e05f997fd4b8dd970f9e2aa782, type: 3}
-  m_Name: AbillitySOSpeed
+  m_Name: AbillitySOProjectile speed
   m_EditorClassIdentifier: 
-  <abillityType>k__BackingField: 2
-  <value>k__BackingField: 1
-  <description>k__BackingField: Speed Up
-  <texture>k__BackingField: {fileID: 2800000, guid: 559ae6c2c650ca9478d023ec91b3040f, type: 3}
+  <abillityType>k__BackingField: 3
+  <value>k__BackingField: 10
+  <description>k__BackingField: Damage Up
+  <texture>k__BackingField: {fileID: 2800000, guid: d74743b3533e80844ad8b98cb09863c5, type: 3}

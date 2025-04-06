@@ -1,6 +1,4 @@
 using System;
-using Unity.Properties;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,6 +11,7 @@ public class LevelUpUI : UIElement
     private AbillitySO[] _abillitiesSO = new AbillitySO[3]; 
     private Player _currentPlayer;
     private GameUI gameUI;
+    private bool isOpen = false;
 
     protected override void Initialize()
     {
@@ -38,11 +37,16 @@ public class LevelUpUI : UIElement
     public override void Open()
     {
         base.Open();
+        isOpen = true;
         Time.timeScale = 0;
     }
 
     public void Open(int playerId)
     {
+        if(isOpen)
+        {
+            return;
+        }
         if(playerId == 1)
         {
             _title.text = "Player 1 choose one";
@@ -54,19 +58,13 @@ public class LevelUpUI : UIElement
             _currentPlayer = Game.Instance.player2;
         }
 
+        _abillitiesSO = _currentPlayer.GetRandomAbillitySOs();
+
         for(int i = 0; i < 3; i++)
         {
-            if(_currentPlayer.TryGetRandomAbility(out AbillitySO abillitySO))
-            {
-                _abillitiesSO[i] = abillitySO;
-                _abillityButtons[i].style.backgroundImage = abillitySO.texture;
-                _abillityTexts[i].text = abillitySO.description;
-                SubscribeLvlUpButton(_abillityButtons[i]);
-            }
-            else
-            {
-                return;
-            }
+            _abillityButtons[i].style.backgroundImage = _abillitiesSO[i].texture;
+            _abillityTexts[i].text = _abillitiesSO[i].description;
+            SubscribeLvlUpButton(_abillityButtons[i]);
         }
         Open();
     }
@@ -75,6 +73,7 @@ public class LevelUpUI : UIElement
     {
         UnsubscribeLvlUpButtons();
         _currentPlayer.PlayLevelUpSound();
+        isOpen = false;
         Time.timeScale = 1;
     }
 
@@ -97,13 +96,16 @@ public class LevelUpUI : UIElement
         switch (abillitySO.abillityType)
         {
             case AbillityType.DamageUp:
+                _currentPlayer.damage += abillitySO.value;
             break;
             case AbillityType.SpeedUp:
+                _currentPlayer.ImproveSpeed(abillitySO.value);
             break;
             case AbillityType.HPUp:
                 _currentPlayer.health.ImproveMaxHealth(abillitySO.value);
             break;
             case AbillityType.ProjectileSpeedUp:
+            _currentPlayer.speedProjectile += abillitySO.value;
             break;
         }
         Close();

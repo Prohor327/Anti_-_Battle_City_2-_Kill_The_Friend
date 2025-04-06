@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour 
 {
-    [SerializeField] private float _damage;
-    [SerializeField] private float _speed;
+    [field: SerializeField] public float _damage { get; private set; }
+    [field: SerializeField] public float _speed { get; private set; }
     [SerializeField] private float _lifeTime;
     [SerializeField] private Transform[] _tilemapDetectorPoints;
     [SerializeField] private Explosion _miniExplosion;
@@ -43,5 +43,15 @@ public class Projectile : MonoBehaviour
             unit.TakeDamege(_damage);
         }
         Destroy(gameObject);
+    }
+
+    public void SetDamage(float newdamage)
+    {
+        _damage = newdamage;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        _speed = newSpeed;
     }
 }

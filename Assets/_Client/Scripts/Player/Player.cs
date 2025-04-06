@@ -13,11 +13,11 @@ public class Player : Unit
     [SerializeField] private int _maxAmountExp;
     [SerializeField] private AudioClip _pickUpGear;
     [SerializeField] private AudioClip _levelUpSound;
-    [SerializeField] private AudioClip _shoot;
+    public float speedProjectile;
+    public float damage;
 
     private PlayerControlPreset _controlPreset;
     private int _currentExp = 0;
-    private AudioSource _audioSource;
 
     public PlayerHealth health { get; private set; }
 
@@ -37,10 +37,8 @@ public class Player : Unit
             GetComponent<Animator>().runtimeAnimatorController = _animatorController2;
             _controlPreset = _controlPreset2;
         }
-        weapon.OnAttack += () => _audioSource.PlayOneShot(_shoot);
         health = GetComponent<PlayerHealth>();
         health.Initialize(_playerId);
-        _audioSource = GetComponent<AudioSource>();
         Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp);
     }
 
@@ -67,7 +65,7 @@ public class Player : Unit
 
         if(Input.GetKeyDown(_controlPreset.shoot))
         {
-            weapon.Attack(transform.rotation, this); 
+            weapon.Attack(transform.rotation, this, damage, speedProjectile); 
         }
         weapon.OnUpdate();
     }
@@ -84,23 +82,24 @@ public class Player : Unit
         }       
     }
 
-    public bool TryGetRandomAbility(out AbillitySO abillitySO)
+    public AbillitySO[] GetRandomAbillitySOs()
     {
-        abillitySO = null;
-        if(!_freeAbilities.Any())
+        List<AbillitySO> abillitySOs =  new List<AbillitySO>(_freeAbilities);
+        AbillitySO[] result = new AbillitySO[3];
+
+        for(int i = 0; i < 3; i++)
         {
-            return false;
+            result[i] = abillitySOs[Random.Range(0, abillitySOs.Count - 1)];
+            abillitySOs.Remove(result[i]);
         }
 
-        abillitySO = _freeAbilities[Random.Range(0, _freeAbilities.Count)];
-        _freeAbilities.Remove(abillitySO);
-        return true;
+        return result;
     }
 
     public void AddExp(int amountexp)
     {
         _currentExp += amountexp;
-        _audioSource.PlayOneShot(_pickUpGear);
+        audioSource.PlayOneShot(_pickUpGear);
         if(_currentExp >= _maxAmountExp)
         {
             _currentExp -= _maxAmountExp;
@@ -110,6 +109,11 @@ public class Player : Unit
 
     public void PlayLevelUpSound()
     {
-        _audioSource.PlayOneShot(_levelUpSound);
+        audioSource.PlayOneShot(_levelUpSound);
+    }
+
+    public void ImproveSpeed(float value)
+    {
+        tankMotor.speed += value;
     }
 }

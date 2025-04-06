@@ -239,6 +239,7 @@ MonoBehaviour:
     _rate: 0.4
     _projectile: {fileID: 1218621113378359738, guid: ddf3e2e98f8a01c4e85b433f850c8d01, type: 3}
   _explosion: {fileID: 7271265341917381814, guid: a812cf35828acf84b86cc79afa39b6d1, type: 3}
+  _shoot: {fileID: 8300000, guid: 5aba0f4f1f0614646b4ba8f07d51a1d1, type: 3}
   _rateChangeDirection: 3
   _gear: {fileID: 8341296154180638132, guid: 009de104f697c354fae9d4dbd2bee4ef, type: 3}
   _amountGears: 3
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733156a65c887354fa93fde71f78371c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 20
   _explosion: {fileID: 7271265341917381814, guid: a812cf35828acf84b86cc79afa39b6d1, type: 3}
   _hit: {fileID: 8300000, guid: 922724644fc4ebb43b1b340e62012459, type: 3}
 --- !u!82 &-8640383826387825009

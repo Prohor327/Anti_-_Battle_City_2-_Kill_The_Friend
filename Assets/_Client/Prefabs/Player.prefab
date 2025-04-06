@@ -243,12 +243,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankMotor:
-    _speed: 4
+    speed: 4
   weapon:
     _bulletSpawnPoint: {fileID: 6997270175576408319}
     _rate: 0.4
     _projectile: {fileID: 1218621113378359738, guid: ddf3e2e98f8a01c4e85b433f850c8d01, type: 3}
   _explosion: {fileID: 7271265341917381814, guid: a812cf35828acf84b86cc79afa39b6d1, type: 3}
+  _shoot: {fileID: 8300000, guid: 5aba0f4f1f0614646b4ba8f07d51a1d1, type: 3}
   _playerId: 2
   _animatorController1: {fileID: 9100000, guid: efbe3ba85293fcc488b41f3d72f752f8, type: 2}
   _animatorController2: {fileID: 9100000, guid: 1f11b31166b13cd43acb938d69a8a83c, type: 2}
@@ -268,10 +269,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a925bf9567a4ff48af53a93b266c38f, type: 2}
   - {fileID: 11400000, guid: ab6b8841a3c10654baa5f66b87408c5b, type: 2}
   - {fileID: 11400000, guid: cefef0972c73f1243a0649068948aefa, type: 2}
+  - {fileID: 11400000, guid: 4126bbeabd2fd6442aa5e45b425ae80d, type: 2}
   _maxAmountExp: 10
   _pickUpGear: {fileID: 8300000, guid: e975a8d808f937c46a175912d457a7fb, type: 3}
   _levelUpSound: {fileID: 8300000, guid: 9fe2dddf159b9e14aac635179941e22c, type: 3}
-  _shoot: {fileID: 8300000, guid: 084500c9d6e7ded4aa1886bd21ab6efb, type: 3}
+  speedProjectile: 5
+  damage: 10
 --- !u!61 &6376621213639189011
 BoxCollider2D:
   m_ObjectHideFlags: 0
