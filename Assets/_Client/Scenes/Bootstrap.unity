@@ -148,6 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08508e202e8fc8a4bb538aeecdd1e83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  _uiRenderTecture: {fileID: 8400000, guid: 08ff3e4d098c8e74986e0dc229b5cefa, type: 2}
 --- !u!4 &1656769131
 Transform:
   m_ObjectHideFlags: 0

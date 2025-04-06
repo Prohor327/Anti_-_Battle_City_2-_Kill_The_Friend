@@ -5,24 +5,43 @@ using UnityEngine;
 public class Player : Unit
 {
     [SerializeField] [Range(1, 2)] private int _playerId;
-    [SerializeField] private PlayerControlPreset _controlPreset;
+    [SerializeField] private RuntimeAnimatorController _animatorController1;
+    [SerializeField] private RuntimeAnimatorController _animatorController2;
+    [SerializeField] private PlayerControlPreset _controlPreset1;
+    [SerializeField] private PlayerControlPreset _controlPreset2;
     [SerializeField] private List<AbillitySO> _freeAbilities;
+    [SerializeField] private int _maxAmountExp;
+    [SerializeField] private AudioClip _pickUpGear;
+    [SerializeField] private AudioClip _levelUpSound;
+    [SerializeField] private AudioClip _shoot;
 
-    public Health health { get; private set; }
+    private PlayerControlPreset _controlPreset;
+    private int _currentExp = 0;
+    private AudioSource _audioSource;
 
-    protected override void Start()
+    public PlayerHealth health { get; private set; }
+
+    public void Initialize(int playerId)
     {
-        base.Start();
+        _playerId = playerId;
+        base.Initialize();
         if(_playerId == 1)
         {
             Game.Instance.player1 = this;
+            GetComponent<Animator>().runtimeAnimatorController = _animatorController1;
+            _controlPreset = _controlPreset1;
         }
         else if(_playerId == 2)
         {
             Game.Instance.player2 = this;
+            GetComponent<Animator>().runtimeAnimatorController = _animatorController2;
+            _controlPreset = _controlPreset2;
         }
-
-        health = GetComponent<Health>();
+        weapon.OnAttack += () => _audioSource.PlayOneShot(_shoot);
+        health = GetComponent<PlayerHealth>();
+        health.Initialize(_playerId);
+        _audioSource = GetComponent<AudioSource>();
+        Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp);
     }
 
     private void Update()
@@ -48,7 +67,7 @@ public class Player : Unit
 
         if(Input.GetKeyDown(_controlPreset.shoot))
         {
-            weapon.Attack(transform.rotation); 
+            weapon.Attack(transform.rotation, this); 
         }
         weapon.OnUpdate();
     }
@@ -76,5 +95,21 @@ public class Player : Unit
         abillitySO = _freeAbilities[Random.Range(0, _freeAbilities.Count)];
         _freeAbilities.Remove(abillitySO);
         return true;
+    }
+
+    public void AddExp(int amountexp)
+    {
+        _currentExp += amountexp;
+        _audioSource.PlayOneShot(_pickUpGear);
+        if(_currentExp >= _maxAmountExp)
+        {
+            _currentExp -= _maxAmountExp;
+        }
+        Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp);
+    }
+
+    public void PlayLevelUpSound()
+    {
+        _audioSource.PlayOneShot(_levelUpSound);
     }
 }

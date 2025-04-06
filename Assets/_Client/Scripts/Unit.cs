@@ -6,7 +6,7 @@ public class Unit : MonoBehaviour
     [SerializeField] protected Weapon weapon;
     [SerializeField] private Explosion _explosion;
 
-    protected virtual void Start()
+    public virtual void Initialize()
     {
         tankMotor.Initialize(transform, GetComponent<Animator>());
     }

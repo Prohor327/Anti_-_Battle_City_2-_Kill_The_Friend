@@ -1,21 +1,24 @@
-using System.ComponentModel.Design;
 using UnityEngine;
 
 public class Health : MonoBehaviour 
 {
     [SerializeField] protected float maxHealth;
     [SerializeField] private Explosion _explosion;
+    [SerializeField] private AudioClip _hit;
 
+    private AudioSource _audioSource;
     protected float health = 0;
 
-    private void Start()
+    public virtual void Initialize()
     {
+        _audioSource = GetComponent<AudioSource>();
         Heal(maxHealth);
     }
 
     public virtual void TakeDamege(float damage)
     {
         health -= damage;
+        _audioSource.PlayOneShot(_hit);
         if(health <= 0)
         {
             GetComponent<Unit>().Die();

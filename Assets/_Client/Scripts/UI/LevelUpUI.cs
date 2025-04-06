@@ -74,6 +74,7 @@ public class LevelUpUI : UIElement
     public void Close()
     {
         UnsubscribeLvlUpButtons();
+        _currentPlayer.PlayLevelUpSound();
         Time.timeScale = 1;
     }
 

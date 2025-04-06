@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f48e35219558fb4fa9eb2b1e398b73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tank: {fileID: 3598588986952911300, guid: 19af099fe044abf45a10b8cd7b2a9486, type: 3}
+  _tank: {fileID: 1639432500574588617, guid: 117522bc430e597408ce2e11b898d6d9, type: 3}

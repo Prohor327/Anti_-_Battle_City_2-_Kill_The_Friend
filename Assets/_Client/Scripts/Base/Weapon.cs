@@ -10,13 +10,16 @@ public class Weapon
 
     private float _attackTimer;
 
-    public void Attack(Quaternion rotationProjectile)
+    public Action OnAttack;
+
+    public void Attack(Quaternion rotationProjectile, Unit unit)
     {
         if(_attackTimer > _rate)
         {
             _attackTimer = 0.0f;
             Projectile projectile = MonoBehaviour.Instantiate(_projectile, _bulletSpawnPoint.position, rotationProjectile);
-            projectile.Run();
+            OnAttack?.Invoke();
+            projectile.Run(unit);
         }
     }
 

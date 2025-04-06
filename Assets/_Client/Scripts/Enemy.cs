@@ -1,3 +1,4 @@
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class Enemy : Unit 
@@ -14,6 +15,12 @@ public class Enemy : Unit
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(transform.position, _gearsSpawnBoxSize);
+    }
+
+    private void Start() 
+    {
+        GetComponent<Health>().Initialize();
+        base.Initialize();
     }
 
     private void Update()
@@ -40,7 +47,7 @@ public class Enemy : Unit
             _currentTime = 0;
         }
         tankMotor.Move(direction);
-        weapon.Attack(transform.rotation);
+        weapon.Attack(transform.rotation, this);
         weapon.OnUpdate();
     }
 

@@ -5,11 +5,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float _damage;
     [SerializeField] private float _speed;
     [SerializeField] private float _lifeTime;
-    [SerializeField] private Transform _tilemapDetectorPoint;
+    [SerializeField] private Transform[] _tilemapDetectorPoints;
     [SerializeField] private Explosion _miniExplosion;
+    [SerializeField] private Unit _myUnit;
 
-    public void Run()
+    public void Run(Unit unit)
     {
+        _myUnit = unit;
         Destroy(gameObject, _lifeTime);
     }
 
@@ -20,10 +22,21 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(_myUnit == null)
+        {
+            return;
+        }
+        if(_myUnit.transform == collision.transform)
+        {
+            return;
+        }
         if(collision.TryGetComponent<Enviroment>(out Enviroment env))
         {
-            env.DestroyTile(_tilemapDetectorPoint.position);
-            Instantiate(_miniExplosion, _tilemapDetectorPoint.position, Quaternion.identity);
+            foreach(Transform t in _tilemapDetectorPoints)
+            {
+                env.DestroyTile(t.position);
+            }
+            Instantiate(_miniExplosion, _tilemapDetectorPoints[1].position, Quaternion.identity);
         }
         if(collision.TryGetComponent<Health>(out Health unit))
         {

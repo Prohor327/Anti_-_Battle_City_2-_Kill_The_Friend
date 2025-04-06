@@ -8,11 +8,18 @@ public class Game : PersistentSingleton<Game>
     public Player player1;
     public Player player2;
 
+    [SerializeField] private RenderTexture _uiRenderTecture;
+
     private void Start()
     {
         scenesOpener = new ScenesOpener();
         gameMachine = new GameMachine();
         gameMachine.Initialize();   
         gameMachine.LoadMenu();
+    }
+
+    public void CleanRenderTexture()
+    {
+        _uiRenderTecture.Release();
     }
 }

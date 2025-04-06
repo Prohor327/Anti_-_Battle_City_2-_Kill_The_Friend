@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class TankSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _tank;
+    [SerializeField] protected Unit _tank;
 
-    public void Spawn()
+    public virtual void Spawn()
     {
         Instantiate(_tank.gameObject, transform.position, transform.rotation);
     }

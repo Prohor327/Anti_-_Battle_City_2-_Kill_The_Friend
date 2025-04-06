@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine.UIElements;
 
 public class GameUI : UIElement
@@ -19,8 +20,8 @@ public class GameUI : UIElement
 
         _lvlUpPanel = _UIElement.Q<VisualElement>("LvlUpPanel");
 
-        _expPlayer1 = _UIElement.Q<ProgressBar>("ExperiencePlayer1");
-        _expPlayer2 = _UIElement.Q<ProgressBar>("ExperiencePlayer2");
+        _expPlayer1 = _UIElement.Q<ProgressBar>("ExperienceBar1");
+        _expPlayer2 = _UIElement.Q<ProgressBar>("ExperienceBar2");
         _hpPlayer1 = _UIElement.Q<ProgressBar>("HPPlayer1");
         _hpPlayer2 = _UIElement.Q<ProgressBar>("HPPlayer2");
 
@@ -32,6 +33,7 @@ public class GameUI : UIElement
 
     public override void Open()
     {
+        Game.Instance.CleanRenderTexture();
         base.Open();
     }
 
@@ -51,15 +53,19 @@ public class GameUI : UIElement
         }
     }
 
-    public void UpdateExp(int playerIndex, float param)
+    public void UpdateExp(int playerIndex, float param, float maxparam)
     {
         if (playerIndex == 1)
         {
-            _expPlayer1.style.height = param;
+            _expPlayer1.value = param;
+            _expPlayer1.highValue = maxparam;
+            _expPlayer1.title = $"{param}/{maxparam}";
         }
         else
         {
-            _expPlayer2.style.height = param;
+            _expPlayer2.value = param;
+            _expPlayer2.highValue = maxparam;
+            _expPlayer2.title = $"{param}/{maxparam}";
         }
     }
 

@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class PlayerHealth : Health 
 {
-    [SerializeField] [Range(1, 2)] private int _playerId;
+    private int _playerId;
+
+    public void Initialize(int playerId)
+    {
+        _playerId = playerId;
+        base.Initialize();
+    }
 
     public override void Heal(float points)
     {
