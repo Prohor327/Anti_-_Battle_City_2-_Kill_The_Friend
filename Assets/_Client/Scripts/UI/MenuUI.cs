@@ -3,6 +3,9 @@ using UnityEngine.UIElements;
 
 public class MenuUI : UIElement
 {
+    [SerializeField] private AudioSource _audioSourse;
+    [SerializeField] private AudioClip _buttonPressed;
+
     private VisualElement _buttonCont2;
 
     protected override void Initialize()
@@ -16,9 +19,21 @@ public class MenuUI : UIElement
         Button confrontation = _UIElement.Q<Button>("Confrontation");
         Button versus = _UIElement.Q<Button>("1vs1");
 
-        play.clicked += ChooseGameVariant;
-        exit.clicked += Application.Quit;
-        confrontation.clicked += () => Game.Instance.gameMachine.LoadLevel();
+        play.clicked += () =>
+        {
+            SoundPlay();
+            ChooseGameVariant();
+        };
+        exit.clicked += () =>
+        {
+            SoundPlay();
+            Application.Quit();
+        };
+        confrontation.clicked += () =>
+        {
+            SoundPlay();
+            Game.Instance.gameMachine.LoadLevel();
+        };
         
         Open();
     }
@@ -27,6 +42,10 @@ public class MenuUI : UIElement
     {
         base.Open();
         _buttonCont2.visible = false;
+    }
+    private void SoundPlay()
+    {
+        _audioSourse.PlayOneShot(_buttonPressed);
     }
 
     private void ChooseGameVariant()

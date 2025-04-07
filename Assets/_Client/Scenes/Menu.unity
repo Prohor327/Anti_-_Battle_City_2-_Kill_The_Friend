@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _asset: {fileID: 9197481963319205126, guid: aa5e3d119d9a5cc47b01f4b6bf542133, type: 3}
+  _audioSourse: {fileID: 0}
+  _buttonPressed: {fileID: 8300000, guid: 713171c0712f83d40bbd06d73f0b7b7a, type: 3}
 --- !u!1 &1535913389
 GameObject:
   m_ObjectHideFlags: 0
