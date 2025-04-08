@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class MenuUI : UIElement
 {
-    [SerializeField] private AudioSource _audioSourse;
+    private AudioSource _audioSource;
     [SerializeField] private AudioClip _buttonPressed;
 
     private VisualElement _buttonCont2;
@@ -11,6 +11,7 @@ public class MenuUI : UIElement
     protected override void Initialize()
     {
         base.Initialize();
+        _audioSource = GetComponent<AudioSource>();
 
         _buttonCont2 = _UIElement.Q<VisualElement>("ButtonsCotext2");
         Button play = _UIElement.Q<Button>("Play");
@@ -43,9 +44,10 @@ public class MenuUI : UIElement
         base.Open();
         _buttonCont2.visible = false;
     }
+    
     private void SoundPlay()
     {
-        _audioSourse.PlayOneShot(_buttonPressed);
+        _audioSource.PlayOneShot(_buttonPressed);
     }
 
     private void ChooseGameVariant()
