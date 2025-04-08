@@ -1,8 +1,12 @@
-using UnityEditor;
+using System;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 public class GameUI : UIElement
 {
+    [SerializeField] private float _timeOnRound;//seconds
+
     private VisualElement _lvlUpPanel;
 
     private ProgressBar _expPlayer1;
@@ -81,4 +85,12 @@ public class GameUI : UIElement
         }
     }
 
+    private void Update()
+    {
+        if(Time.deltaTime == 1)
+        {
+            _timeOnRound -= Time.deltaTime;
+            _timer.text = (_timeOnRound / 60).ToString() + ":" + MathF.Round(_timeOnRound % 60);
+        }
+    }
 }

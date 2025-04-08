@@ -37,3 +37,7 @@
     left: 92px;
     overflow: hidden;
 }
+
+.buttonBackroundHover:hover {
+    background-image: url("project://database/Assets/_Client/Sprites/Button%20Hover.png?fileID=-913414101678943861&guid=24f6ed7524febb54c9a6970a32f89c02&type=3#Button Hover_0");
+}

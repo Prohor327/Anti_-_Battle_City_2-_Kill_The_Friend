@@ -5,24 +5,24 @@
             <ui:Label text="Kill your friend" class="menuButton text" style="position: absolute; top: 522px; left: 78px; width: 812px; -unity-text-align: upper-center; height: 68px; color: rgb(32, 181, 69); font-size: 49px;" />
         </ui:VisualElement>
         <ui:VisualElement name="ButtonsCotext1" style="flex-grow: 1; width: 420px; align-items: center; justify-content: flex-start; position: absolute; height: 371px; top: 664px; left: 750px; visibility: visible;">
-            <ui:Button name="Play" class="menuButton buttonBackround buttonBackroundFocus" style="width: 460px; position: absolute; top: 0; left: 0; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
+            <ui:Button name="Play" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: absolute; top: 0; left: 0; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
                 <ui:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus" style="top: 5px; left: -163px; height: 140px;">
                     <ui:Label text="Play" name="Label" class="text" style="position: absolute; top: 16px; left: 178px; height: 117px; width: 429px;" />
                 </ui:VisualElement>
             </ui:Button>
-            <ui:Button name="Exit" class="menuButton buttonBackround buttonBackroundFocus" style="width: 460px; position: absolute; top: 161px; left: 0; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
+            <ui:Button name="Exit" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: absolute; top: 161px; left: 0; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
                 <ui:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus" style="height: 143px; top: 7px;">
                     <ui:Label text="Exit" name="Label" class="text" style="position: absolute; top: 13px; left: 171px; height: 117px; width: 429px;" />
                 </ui:VisualElement>
             </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="ButtonsCotext2" style="flex-grow: 1; width: 461px; align-items: center; justify-content: flex-start; position: absolute; height: 317px; top: 664px; left: 753px; background-color: rgb(0, 0, 0); display: flex; transition-property: visibility; transition-delay: 0s; transition-duration: 0ms; overflow: visible; opacity: 1; visibility: hidden;">
-            <ui:Button name="Confrontation" class="menuButton buttonBackround buttonBackroundFocus" style="width: 460px; position: relative; top: auto; left: auto; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-self: center; overflow: visible;">
+            <ui:Button name="Confrontation" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: relative; top: auto; left: auto; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-self: center; overflow: visible;">
                 <ui:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus" style="top: -1px; left: -174px; position: relative; height: 130px;">
                     <ui:Label text="Conf" name="Label" emoji-fallback-support="true" enable-rich-text="true" class="text" style="position: relative; top: 7px; left: 178px; height: 117px; width: 429px;" />
                 </ui:VisualElement>
             </ui:Button>
-            <ui:Button name="1vs1" class="menuButton buttonBackround buttonBackroundFocus" style="width: 460px; position: relative; top: auto; left: auto; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-self: center; align-items: center; justify-content: center;">
+            <ui:Button name="1vs1" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: relative; top: auto; left: auto; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-self: center; align-items: center; justify-content: center;">
                 <ui:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus" style="top: 2px; left: -321px; position: relative;">
                     <ui:Label text="1 vs 1" name="Label" class="text" style="position: relative; top: 16px; left: 178px; height: 117px; width: 429px; word-spacing: -57px; overflow: visible;" />
                 </ui:VisualElement>
