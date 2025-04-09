@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class LevelUpUI : UIElement
 {
@@ -39,6 +40,8 @@ public class LevelUpUI : UIElement
         base.Open();
         isOpen = true;
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void Open(int playerId)
@@ -75,6 +78,8 @@ public class LevelUpUI : UIElement
         _currentPlayer.PlayLevelUpSound();
         isOpen = false;
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void SubscribeLvlUpButton(Button button)

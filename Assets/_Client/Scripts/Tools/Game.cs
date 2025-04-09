@@ -16,6 +16,7 @@ public class Game : PersistentSingleton<Game>
         gameMachine = new GameMachine();
         gameMachine.Initialize();   
         gameMachine.LoadMenu();
+        CleanRenderTexture();
     }
 
     public void CleanRenderTexture()

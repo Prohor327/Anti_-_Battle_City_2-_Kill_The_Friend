@@ -19,6 +19,7 @@ public class GameMachine
         Game.print("Game Machine Is Opening Menu");
         Game.Instance.scenesOpener.LoadMenu();
         state = GameState.Menu;
+        Game.Instance.CleanRenderTexture();
     }
 
     public void LoadLevel()
