@@ -220,6 +220,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34daea4a529cab7478d27b44e2580c8f, type: 3}
+--- !u!225 &506302734 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5079300946672683999, guid: 34daea4a529cab7478d27b44e2580c8f, type: 3}
+  m_PrefabInstance: {fileID: 506302733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &757681325
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +237,7 @@ GameObject:
   - component: {fileID: 757681327}
   - component: {fileID: 757681329}
   - component: {fileID: 757681330}
+  - component: {fileID: 757681331}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -384,6 +390,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &757681331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757681325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941d2bfa5dd87634ea8f3acea8840a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 506302734}
 --- !u!1 &1535913389
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +519,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -529,6 +548,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955001345379156644, guid: 029f24f7f3df2a340854737c39b39687, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 78afe6ead04e23948851a0107d8e2fb9, type: 2}
     - target: {fileID: 2169878876310866564, guid: 029f24f7f3df2a340854737c39b39687, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.008085

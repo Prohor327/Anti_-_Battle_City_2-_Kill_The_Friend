@@ -84,15 +84,15 @@ public class LevelUpUI : UIElement
 
     private void UnsubscribeLvlUpButtons()
     {
-        _abillityButtons[0].clicked -= () => { };
-        _abillityButtons[1].clicked -= () => { };
-        _abillityButtons[2].clicked -= () => { };
+        _abillityButtons[0].clicked += () => { };
+        _abillityButtons[1].clicked += () => { };
+        _abillityButtons[2].clicked += () => { };
     }
 
     private void OnButtonPressed(Button button)
     {
         AbillitySO abillitySO = _abillitiesSO[Convert.ToInt32(button.name) - 1];
-
+        
         switch (abillitySO.abillityType)
         {
             case AbillityType.DamageUp:
@@ -105,7 +105,7 @@ public class LevelUpUI : UIElement
                 _currentPlayer.health.ImproveMaxHealth(abillitySO.value);
             break;
             case AbillityType.ProjectileSpeedUp:
-            _currentPlayer.speedProjectile += abillitySO.value;
+                _currentPlayer.speedProjectile += abillitySO.value;
             break;
         }
         Close();

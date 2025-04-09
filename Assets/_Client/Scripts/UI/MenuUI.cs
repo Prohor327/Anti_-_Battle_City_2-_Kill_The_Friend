@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class MenuUI : UIElement
 {
     private AudioSource _audioSource;
     [SerializeField] private AudioClip _buttonPressed;
+
+    private Fader _fader;
 
     private VisualElement _buttonCont2;
 
@@ -12,6 +15,7 @@ public class MenuUI : UIElement
     {
         base.Initialize();
         _audioSource = GetComponent<AudioSource>();
+        _fader = GetComponent<Fader>();
 
         _buttonCont2 = _UIElement.Q<VisualElement>("ButtonsCotext2");
         Button play = _UIElement.Q<Button>("Play");
@@ -33,7 +37,10 @@ public class MenuUI : UIElement
         confrontation.clicked += () =>
         {
             SoundPlay();
-            Game.Instance.gameMachine.LoadLevel();
+            _fader.Fade();
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            _fader.OnFaded += Game.Instance.gameMachine.LoadLevel;
         };
         
         Open();
