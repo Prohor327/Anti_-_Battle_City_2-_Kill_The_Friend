@@ -7,6 +7,7 @@ public class PlayerSpawner : TankSpawner
 
     public override void Spawn()
     {
-        Instantiate(player, transform.position, transform.rotation).Initialize(_playerId);
+        Player playera = Instantiate(player, transform.position, transform.rotation);
+        Game.Instance.OnStartRound += () => playera.Initialize(_playerId);
     }
 }

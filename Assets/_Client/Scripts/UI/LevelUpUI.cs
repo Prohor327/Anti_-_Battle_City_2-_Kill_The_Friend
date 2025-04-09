@@ -42,6 +42,7 @@ public class LevelUpUI : UIElement
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Game.Instance.music.SetToLowVolume();
     }
 
     public void Open(int playerId)
@@ -80,6 +81,7 @@ public class LevelUpUI : UIElement
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Game.Instance.music.SetToHighVolume();
     }
 
     public void SubscribeLvlUpButton(Button button)

@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
         Game.Instance.UIManager = this;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         Game.Instance.UIManager = null;
     }

@@ -19,11 +19,12 @@ public class Enemy : Unit
     private void Start() 
     {
         GetComponent<Health>().Initialize();
-        base.Initialize();
+        Game.Instance.OnStartRound += Initialize;
     }
 
     private void Update()
     {
+        if(!isInitialized) return;
         _currentTime += Time.deltaTime;
         if(_currentTime >= _rateChangeDirection)
         {
