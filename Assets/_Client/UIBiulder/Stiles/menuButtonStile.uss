@@ -22,6 +22,10 @@
     left: 21px;
 }
 
+.buttonBackroundHover:hover {
+    background-image: url("project://database/Assets/_Client/Sprites/Button%20Hover.png?fileID=-913414101678943861&guid=24f6ed7524febb54c9a6970a32f89c02&type=3#Button Hover_0");
+}
+
 .buttonBackroundFocus:focus {
     background-image: url("project://database/Assets/_Client/Sprites/Button%20Pressed.png?fileID=2800000&guid=a2204d35719a57142b9773bb7e6f8ca9&type=3#Button Pressed");
     overflow: hidden;
@@ -36,8 +40,4 @@
     -unity-text-align: middle-center;
     left: 92px;
     overflow: hidden;
-}
-
-.buttonBackroundHover:hover {
-    background-image: url("project://database/Assets/_Client/Sprites/Button%20Hover.png?fileID=-913414101678943861&guid=24f6ed7524febb54c9a6970a32f89c02&type=3#Button Hover_0");
 }
