@@ -9,12 +9,14 @@ public class Unit : MonoBehaviour
     
     protected AudioSource audioSource;
 
+    protected bool isInitialized = false;
+
     public virtual void Initialize()
     {
         tankMotor.Initialize(transform, GetComponent<Animator>());
         weapon.OnAttack += () => audioSource.PlayOneShot(_shoot);
         audioSource = GetComponent<AudioSource>();
-        
+        isInitialized = true;
     }
 
     public virtual void Die()

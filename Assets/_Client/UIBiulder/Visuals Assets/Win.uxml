@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(0, 8, 255);">
+        <engine:Label name="PlayerText" class="text" style="position: absolute; height: 95px; width: 1074px; top: 52px; left: 426px;" />
+        <engine:VisualElement name="PlayerImage" style="flex-grow: 1; position: absolute; height: 486px; width: 518px; left: 678px; top: 418px; background-image: url(&quot;project://database/Assets/_Client/Sprites/sprite.png?fileID=7509503784008040634&amp;guid=845d578acbba4e943952d7dfb4467756&amp;type=3#sprite_129&quot;); background-color: rgba(0, 0, 0, 0);" />
+    </engine:VisualElement>
+</engine:UXML>

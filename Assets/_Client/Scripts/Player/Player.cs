@@ -40,10 +40,12 @@ public class Player : Unit
         health = GetComponent<PlayerHealth>();
         health.Initialize(_playerId);
         Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp);
+        Game.Instance.roundManager.StartManager();
     }
 
     private void Update()
     {
+        if(!isInitialized) return;
         Vector2 tankDirection = Vector2.zero;
         if(Input.GetKey(_controlPreset.moveDown))
         {
@@ -70,16 +72,10 @@ public class Player : Unit
         weapon.OnUpdate();
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
-        if(_playerId == 1)
-        {
-            Game.Instance.player1 = null;
-        }
-        else if(_playerId == 2)
-        {
-            Game.Instance.player2 = null;
-        }       
+        Game.Instance.player1 = null;
+        Game.Instance.player2 = null;   
     }
 
     public AbillitySO[] GetRandomAbillitySOs()
