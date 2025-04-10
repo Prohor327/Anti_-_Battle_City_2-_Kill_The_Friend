@@ -19,12 +19,12 @@
         <ui:VisualElement name="ButtonsCotext2" style="flex-grow: 1; width: 461px; align-items: center; justify-content: flex-start; position: absolute; height: 317px; top: 665px; left: 753px; background-color: rgb(0, 0, 0); display: flex; transition-property: visibility; transition-delay: 0s; transition-duration: 0ms; overflow: visible; opacity: 1; visibility: hidden;">
             <ui:Button name="Confrontation" class="menuButton buttonBackround buttonBackroundHover buttonBackroundFocus" style="width: 460px; position: relative; top: auto; left: auto; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-self: center; overflow: visible;">
                 <ui:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus" style="top: -1px; left: -174px; position: relative; height: 130px;">
-                    <ui:Label text="Conf" name="Label" emoji-fallback-support="true" enable-rich-text="true" class="text" style="position: relative; top: 7px; left: 178px; height: 117px; width: 429px;" />
+                    <ui:Label text="1 sv 1" name="Label" emoji-fallback-support="true" enable-rich-text="true" class="text" style="position: relative; top: 7px; left: 178px; height: 117px; width: 429px;" />
                 </ui:VisualElement>
             </ui:Button>
             <ui:Button name="1vs1" class="menuButton buttonBackround buttonBackroundHover buttonBackroundFocus" style="width: 460px; position: relative; top: auto; left: auto; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-self: center; align-items: center; justify-content: center;">
                 <ui:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus" style="top: 2px; left: -321px; position: relative;">
-                    <ui:Label text="1 vs 1" name="Label" class="text" style="position: relative; top: 16px; left: 178px; height: 117px; width: 429px; word-spacing: -57px; overflow: visible;" />
+                    <ui:Label text="soon...." name="Label" class="text" style="position: relative; top: 16px; left: 178px; height: 117px; width: 429px; word-spacing: -57px; overflow: visible;" />
                 </ui:VisualElement>
             </ui:Button>
         </ui:VisualElement>

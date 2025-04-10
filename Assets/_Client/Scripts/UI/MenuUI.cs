@@ -50,6 +50,8 @@ public class MenuUI : UIElement
     {
         base.Open();
         _buttonCont2.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     
     private void SoundPlay()
