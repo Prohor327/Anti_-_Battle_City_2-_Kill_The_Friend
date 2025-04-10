@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class Pause : UIElement
 {
+    [SerializeField] private GameUI _gameUI;
     private bool _onPause;
     protected override void Initialize()
     {
@@ -24,16 +26,28 @@ public class Pause : UIElement
     {
         if (!_onPause)
         {
+            _onPause = true;
             Time.timeScale = 0;
             AddElement();
-            _onPause = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
     private void Close()
     {
-        Time.timeScale = 1;
-        RemoveComponent();
         _onPause = false;
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        _gameUI.Open();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Open();
+        }
     }
 }

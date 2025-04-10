@@ -31,9 +31,4 @@ public class UIElement : MonoBehaviour
     {
         _document.Add(_UIElement);
     }
-
-    protected void RemoveComponent()
-    {
-        _document.Remove(_UIElement);
-    }
 }

@@ -1,6 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
-    <engine:VisualElement style="flex-grow: 1; background-color: rgb(20, 23, 135);">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); background-image: url(&quot;project://database/Assets/_Client/Sprites/level%20upBackground.png?fileID=2800000&amp;guid=274c962c0ca0c104fa209ca16bd9c78e&amp;type=3#level upBackground&quot;);">
         <engine:Label name="PlayerText" class="text" style="position: absolute; height: 95px; width: 1074px; top: 52px; left: 426px;" />
         <engine:VisualElement name="PlayerImage" style="flex-grow: 1; position: absolute; height: 486px; width: 518px; left: 678px; top: 418px; background-image: none; background-color: rgba(0, 0, 0, 0);" />
     </engine:VisualElement>

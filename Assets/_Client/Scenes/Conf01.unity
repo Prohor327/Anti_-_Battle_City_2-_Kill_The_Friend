@@ -7718,6 +7718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _asset: {fileID: 9197481963319205126, guid: 4cabb73291b82384a83377452661efc9, type: 3}
+  _gameUI: {fileID: 652892442}
 --- !u!1001 &753974251
 PrefabInstance:
   m_ObjectHideFlags: 0
