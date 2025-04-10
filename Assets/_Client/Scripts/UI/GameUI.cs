@@ -28,7 +28,7 @@ public class GameUI : UIElement
         _hpPlayer2 = _UIElement.Q<ProgressBar>("HPPlayer2");
 
         _scorePlayer1 = _UIElement.Q<Label>("ScorePlayer1");
-        _scorePlayer1 = _UIElement.Q<Label>("ScorePlayer2");
+        _scorePlayer2 = _UIElement.Q<Label>("ScorePlayer2");
         _timer = _UIElement.Q<Label>("Timer");
         Open();
     }
@@ -71,16 +71,11 @@ public class GameUI : UIElement
         }
     }
 
-    public void UpdateScore(int playerIndex, float param)
+    public void UpdateScore(int player1, int player2)
     {
-        if (playerIndex == 1)
-        {
-            _scorePlayer1.text = param.ToString();
-        }
-        else
-        {
-            _scorePlayer2.text = param.ToString();
-        }
+        Game.Instance.CleanRenderTexture();
+        _scorePlayer1.text = player1.ToString();
+        _scorePlayer2.text = player2.ToString();
     }
 
     public void UpdateTime(int time)

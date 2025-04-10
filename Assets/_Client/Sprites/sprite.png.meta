@@ -7080,7 +7080,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -7089,6 +7089,28 @@ TextureImporter:
       bones: []
       spriteID: c51d4c059d4a61d40acd18db2e6e4f84
       internalID: 2093088511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Empty texture
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 700
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128f4cab543a521459ab6db33ac77ad3
+      internalID: -219320038
       vertices: []
       indices: 
       edges: []
@@ -7107,6 +7129,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Empty texture: -219320038
       sprite_0: -4298345892085953899
       sprite_1: 7468057293271108204
       sprite_10: 3315133225947153681
