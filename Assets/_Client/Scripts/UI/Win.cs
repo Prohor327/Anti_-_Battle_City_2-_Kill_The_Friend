@@ -14,6 +14,9 @@ public class Win : UIElement
 
         _winText = _UIElement.Q<Label>("PlayerText");
         _playerImage = _UIElement.Q<VisualElement>("PlayerImage");
+        Button Exit = _UIElement.Q<Button>("Exit");
+
+        Exit.clicked += Game.Instance.scenesOpener.LoadMenu;
     }
 
     public override void Open()
