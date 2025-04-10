@@ -3,7 +3,8 @@ using UnityEngine.UIElements;
 
 public class Win : UIElement
 {
-    [SerializeField] private Sprite _winSprite;
+    [SerializeField] private Sprite[] _winSprite;
+
     private Label _winText;
     private VisualElement _playerImage;
 
