@@ -72,7 +72,7 @@ public class Player : Unit
         weapon.OnUpdate();
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
         Game.Instance.player1 = null;
         Game.Instance.player2 = null;   
@@ -111,5 +111,11 @@ public class Player : Unit
     public void ImproveSpeed(float value)
     {
         tankMotor.speed += value;
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        Game.Instance.roundManager.EndRound(_playerId);
     }
 }

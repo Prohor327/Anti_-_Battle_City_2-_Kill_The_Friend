@@ -9,7 +9,7 @@ public class TankSpawner : MonoBehaviour
         Instantiate(_tank.gameObject, transform.position, transform.rotation);
     }
 
-    public void End()
+    public virtual void End()
     {
         Destroy(gameObject);
     }

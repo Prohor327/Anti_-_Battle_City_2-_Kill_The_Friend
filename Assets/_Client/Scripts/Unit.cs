@@ -1,3 +1,4 @@
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class Unit : MonoBehaviour 
@@ -14,7 +15,7 @@ public class Unit : MonoBehaviour
     public virtual void Initialize()
     {
         tankMotor.Initialize(transform, GetComponent<Animator>());
-        weapon.OnAttack += () => audioSource.PlayOneShot(_shoot);
+        weapon.OnAttack += PlaySoundShoot;
         audioSource = GetComponent<AudioSource>();
         isInitialized = true;
     }
@@ -23,5 +24,15 @@ public class Unit : MonoBehaviour
     {
         Instantiate(_explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void PlaySoundShoot()
+    {
+        audioSource.PlayOneShot(_shoot);
+    }
+
+    protected virtual void OnDestroy()
+    {
+        weapon.OnAttack -= PlaySoundShoot;
     }
 }

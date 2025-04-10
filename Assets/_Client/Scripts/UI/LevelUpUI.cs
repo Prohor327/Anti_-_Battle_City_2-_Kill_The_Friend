@@ -68,7 +68,7 @@ public class LevelUpUI : UIElement
         {
             _abillityButtons[i].style.backgroundImage = _abillitiesSO[i].texture;
             _abillityTexts[i].text = _abillitiesSO[i].description;
-            SubscribeLvlUpButton(_abillityButtons[i]);
+            _abillityButtons[i].clicked += () => OnButtonPressed(_abillityButtons[i]);
         }
         Open();
     }
@@ -82,11 +82,6 @@ public class LevelUpUI : UIElement
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Game.Instance.music.SetToHighVolume();
-    }
-
-    public void SubscribeLvlUpButton(Button button)
-    {
-        button.clicked += () => OnButtonPressed(button);
     }
 
     private void UnsubscribeLvlUpButtons()
