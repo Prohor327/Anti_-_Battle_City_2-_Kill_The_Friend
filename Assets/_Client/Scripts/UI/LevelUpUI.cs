@@ -14,6 +14,8 @@ public class LevelUpUI : UIElement
     private GameUI gameUI;
     private bool isOpen = false;
 
+    private int _i;
+
     protected override void Initialize()
     {
         base.Initialize();
@@ -21,11 +23,11 @@ public class LevelUpUI : UIElement
         gameUI = GetComponent<GameUI>();
 
         _lvlUpPanel = _UIElement.Q<VisualElement>("LvlUpPanel");
-
         _abillityButtons = new Button[3];
         _abillityButtons[0] = _UIElement.Q<Button>("1");
         _abillityButtons[1] = _UIElement.Q<Button>("2");
         _abillityButtons[2] = _UIElement.Q<Button>("3");
+
 
         _abillityTexts = new Label[3];
         _abillityTexts[0] = _UIElement.Q<Label>("1t");
@@ -47,6 +49,7 @@ public class LevelUpUI : UIElement
 
     public void Open(int playerId)
     {
+        _i = 0;
         if(isOpen)
         {
             return;
@@ -93,6 +96,7 @@ public class LevelUpUI : UIElement
 
     private void UnsubscribeLvlUpButtons()
     {
+        print("000");
         _abillityButtons[0].clicked -= () => OnButtonPressed(_abillityButtons[0]);
         _abillityButtons[1].clicked -= () => OnButtonPressed(_abillityButtons[1]);
         _abillityButtons[2].clicked -= () => OnButtonPressed(_abillityButtons[2]);
@@ -101,7 +105,7 @@ public class LevelUpUI : UIElement
     private void OnButtonPressed(Button button)
     {
         AbillitySO abillitySO = _abillitiesSO[Convert.ToInt32(button.name) - 1];
-        
+        if (_i >= 1) return;
         switch (abillitySO.abillityType)
         {
             case AbillityType.DamageUp:
@@ -117,6 +121,7 @@ public class LevelUpUI : UIElement
                 _currentPlayer.speedProjectile += abillitySO.value;
             break;
         }
+        _i++;
         Close();
         gameUI.Open();
     }
