@@ -28,5 +28,11 @@
                 </ui:VisualElement>
             </ui:Button>
         </ui:VisualElement>
+        <ui:VisualElement name="ChoosePanel" focusable="false" style="flex-grow: 1; position: absolute; height: 698px; width: 1400px; left: 240px; top: 223px; background-color: rgba(0, 24, 67, 0); background-image: url(&quot;project://database/Assets/_Client/Sprites/level%20upBackground.png?fileID=2800000&amp;guid=274c962c0ca0c104fa209ca16bd9c78e&amp;type=3#level upBackground&quot;); visibility: visible;">
+            <ui:Label text="Choose map" name="Title" class="text" style="width: 1197px; top: 33px;" />
+            <ui:Button name="1" data-source-path="_value_k__BackingField" style="height: 400px; width: 400px; position: absolute; top: 180px; left: 35px; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); overflow: visible; background-image: url(&quot;project://database/Assets/_Client/Sprites/Maps/001.png?fileID=2800000&amp;guid=a748973049bfff14f85aa7958f95d01f&amp;type=3#001&quot;);" />
+            <ui:Button name="2" style="height: 400px; width: 400px; position: absolute; top: 180px; left: 498px; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); overflow: visible; background-image: url(&quot;project://database/Assets/_Client/Sprites/Maps/002.png?fileID=2800000&amp;guid=d03208f3db5f53b45b68035717741a57&amp;type=3#002&quot;);" />
+            <ui:Button name="3" style="height: 400px; width: 400px; position: absolute; top: 180px; left: auto; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); right: 35px; overflow: visible; background-image: url(&quot;project://database/Assets/_Client/Sprites/Maps/003.png?fileID=2800000&amp;guid=e5c885b663fa93146aa04b3208dea10d&amp;type=3#003&quot;);" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
