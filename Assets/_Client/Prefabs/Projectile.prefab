@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <_damage>k__BackingField: 10
-  <_speed>k__BackingField: 5
+  <_speed>k__BackingField: 13
   _lifeTime: 5
   _tilemapDetectorPoints:
   - {fileID: 5699252155647380842}

@@ -80,7 +80,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.19
+  m_Radius: 0.3
 --- !u!1 &2626883216387599364
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,11 +270,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab6b8841a3c10654baa5f66b87408c5b, type: 2}
   - {fileID: 11400000, guid: cefef0972c73f1243a0649068948aefa, type: 2}
   - {fileID: 11400000, guid: 4126bbeabd2fd6442aa5e45b425ae80d, type: 2}
-  _maxAmountExp: 10
+  _maxAmountExp: 06000000080000000a0000000c0000000e0000000f00000010000000
   _pickUpGear: {fileID: 8300000, guid: e975a8d808f937c46a175912d457a7fb, type: 3}
   _levelUpSound: {fileID: 8300000, guid: 9fe2dddf159b9e14aac635179941e22c, type: 3}
   speedProjectile: 5
   damage: 10
+  playerSpawner: {fileID: 0}
 --- !u!61 &6376621213639189011
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -540,4 +541,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 1.12

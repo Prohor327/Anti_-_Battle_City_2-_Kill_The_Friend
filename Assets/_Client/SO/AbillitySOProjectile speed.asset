@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AbillitySOProjectile speed
   m_EditorClassIdentifier: 
   <abillityType>k__BackingField: 3
-  <value>k__BackingField: 10
-  <description>k__BackingField: Damage Up
+  <value>k__BackingField: 4
+  <description>k__BackingField: Projectile Speed Up
   <texture>k__BackingField: {fileID: 2800000, guid: d74743b3533e80844ad8b98cb09863c5, type: 3}

@@ -22,7 +22,7 @@ public class MenuUI : UIElement
         Button exit = _UIElement.Q<Button>("Exit");
 
         Button confrontation = _UIElement.Q<Button>("Confrontation");
-        Button versus = _UIElement.Q<Button>("1vs1");
+        Button baseButton = _UIElement.Q<Button>("Base");
 
         play.clicked += () =>
         {
@@ -34,13 +34,21 @@ public class MenuUI : UIElement
             SoundPlay();
             Application.Quit();
         };
+        baseButton.clicked += () =>
+        {
+            SoundPlay();
+            _fader.Fade();
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            _fader.OnFaded += () => Game.Instance.gameMachine.LoadLevel(Consts.BASE01_SCENE_NAME);
+        };
         confrontation.clicked += () =>
         {
             SoundPlay();
             _fader.Fade();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            _fader.OnFaded += Game.Instance.gameMachine.LoadLevel;
+            _fader.OnFaded += () => Game.Instance.gameMachine.LoadLevel(Consts.CONF01_SCENE_NAME);
         };
         
         Open();

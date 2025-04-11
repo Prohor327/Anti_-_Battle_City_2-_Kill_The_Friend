@@ -19,7 +19,6 @@ public class Enemy : Unit
     private void Start() 
     {
         GetComponent<Health>().Initialize();
-        Game.Instance.OnStartRound += Initialize;
     }
 
     private void Update()

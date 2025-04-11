@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip _hit;
 
     private AudioSource _audioSource;
-    protected float health = 0;
+    public float health { get; private set; }
 
     public virtual void Initialize()
     {

@@ -10,7 +10,7 @@ public class Player : Unit
     [SerializeField] private PlayerControlPreset _controlPreset1;
     [SerializeField] private PlayerControlPreset _controlPreset2;
     [SerializeField] private List<AbillitySO> _freeAbilities;
-    [SerializeField] private int _maxAmountExp;
+    [SerializeField] private int[] _maxAmountExp;
     [SerializeField] private AudioClip _pickUpGear;
     [SerializeField] private AudioClip _levelUpSound;
     public float speedProjectile;
@@ -18,8 +18,10 @@ public class Player : Unit
 
     private PlayerControlPreset _controlPreset;
     private int _currentExp = 0;
+    private int _currentMaxExpIndex = 0;
 
     public PlayerHealth health { get; private set; }
+    public PlayerSpawner playerSpawner;
 
     public void Initialize(int playerId)
     {
@@ -39,8 +41,11 @@ public class Player : Unit
         }
         health = GetComponent<PlayerHealth>();
         health.Initialize(_playerId);
-        Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp);
-        Game.Instance.roundManager.StartManager();
+        Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp[_currentMaxExpIndex]);
+        if(Game.Instance.level.playMode == PlayMode.Conf)
+        {
+            Game.Instance.roundManager.StartManager();
+        }
     }
 
     private void Update()
@@ -85,7 +90,7 @@ public class Player : Unit
 
         for(int i = 0; i < 3; i++)
         {
-            result[i] = abillitySOs[Random.Range(0, abillitySOs.Count - 1)];
+            result[i] = abillitySOs[Random.Range(0, abillitySOs.Count)];
             abillitySOs.Remove(result[i]);
         }
 
@@ -96,11 +101,13 @@ public class Player : Unit
     {
         _currentExp += amountexp;
         audioSource.PlayOneShot(_pickUpGear);
-        if(_currentExp >= _maxAmountExp)
+        if(_currentExp >= _maxAmountExp[_currentMaxExpIndex])
         {
-            _currentExp -= _maxAmountExp;
+            _currentExp -= _maxAmountExp[_currentMaxExpIndex];
+            Game.Instance.UIManager.levelUpUI.Open(_playerId);
+            _currentMaxExpIndex++;
         }
-        Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp);
+        Game.Instance.UIManager.gameUI.UpdateExp(_playerId, _currentExp, _maxAmountExp[_currentMaxExpIndex]);
     }
 
     public void PlayLevelUpSound()
@@ -116,6 +123,21 @@ public class Player : Unit
     public override void Die()
     {
         base.Die();
-        Game.Instance.roundManager.EndRound(_playerId);
+
+        if(Game.Instance.level.playMode == PlayMode.Conf)
+        {
+            if(_playerId == 1)
+            {
+                Game.Instance.roundManager.EndRound(2);
+            }
+            else if(_playerId == 2)
+            {
+                Game.Instance.roundManager.EndRound(1);
+            }
+        }
+        else if(Game.Instance.level.playMode == PlayMode.Base)
+        {
+            playerSpawner.SpawnNewPlayer();
+        }
     }
 }

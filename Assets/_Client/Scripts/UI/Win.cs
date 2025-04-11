@@ -3,8 +3,6 @@ using UnityEngine.UIElements;
 
 public class Win : UIElement
 {
-    [SerializeField] private Sprite[] _winSprite;
-
     private Label _winText;
     private VisualElement _playerImage;
 
@@ -13,18 +11,24 @@ public class Win : UIElement
         base.Initialize();
 
         _winText = _UIElement.Q<Label>("PlayerText");
-        _playerImage = _UIElement.Q<VisualElement>("PlayerImage");
         Button Exit = _UIElement.Q<Button>("Exit");
 
-        Exit.clicked += Game.Instance.scenesOpener.LoadMenu;
+        Exit.clicked += () => 
+        {
+            Game.Instance.scenesOpener.LoadMenu();
+            Time.timeScale = 1;
+        };
     }
 
     public override void Open()
     {
         base.Open();
+        Time.timeScale = 0;
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
     }
 
-    private void ChangeText(string text)
+    public void ChangeText(string text)
     {
         _winText.text = text;
     }

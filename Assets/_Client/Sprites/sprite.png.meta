@@ -6764,7 +6764,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_268
+      name: Base
       rect:
         serializedVersion: 2
         x: 1244
@@ -7102,7 +7102,7 @@ TextureImporter:
         width: 53
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -7129,6 +7129,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Base: 1624663184
       Empty texture: -219320038
       sprite_0: -4298345892085953899
       sprite_1: 7468057293271108204
@@ -7318,7 +7319,6 @@ TextureImporter:
       sprite_265: -884849166
       sprite_266: 827334226
       sprite_267: -1231035464
-      sprite_268: 1624663184
       sprite_269: -1257557110
       sprite_27: 8731780737059244501
       sprite_270: -1320156734

@@ -149,8 +149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIManager: {fileID: 0}
+  roundManager: {fileID: 0}
+  music: {fileID: 0}
   player1: {fileID: 0}
   player2: {fileID: 0}
+  level: {fileID: 0}
   _uiRenderTecture: {fileID: 8400000, guid: 08ff3e4d098c8e74986e0dc229b5cefa, type: 2}
 --- !u!4 &1656769131
 Transform:

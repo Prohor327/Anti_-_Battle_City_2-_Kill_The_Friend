@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -15,6 +16,7 @@ public class GameUI : UIElement
     private Label _scorePlayer1;
     private Label _scorePlayer2;
     private Label _timer;
+    private Label _centerMessage;
 
     protected override void Initialize()
     {
@@ -30,6 +32,8 @@ public class GameUI : UIElement
         _scorePlayer1 = _UIElement.Q<Label>("ScorePlayer1");
         _scorePlayer2 = _UIElement.Q<Label>("ScorePlayer2");
         _timer = _UIElement.Q<Label>("Timer");
+        _centerMessage = _UIElement.Q<Label>("CenterMessage");
+        _centerMessage.text = "";
         Open();
     }
 
@@ -81,5 +85,32 @@ public class GameUI : UIElement
     public void UpdateTime(int time)
     {
         _timer.text = time.ToString();
+    }
+
+    public void ThrowMessageOnCenterScreen(string message, float duration)
+    {
+        StopCoroutine(ThrowMessageOnCenterScreenCoroutine(message, duration));
+        StartCoroutine(ThrowMessageOnCenterScreenCoroutine(message, duration));
+    }
+
+    private IEnumerator ThrowMessageOnCenterScreenCoroutine(string message, float duration)
+    {
+        _centerMessage.text = message;
+        yield return new WaitForSeconds(duration);
+        _centerMessage.text = "";
+        Game.Instance.CleanRenderTexture();
+    }
+
+    public void DisableTimer()
+    {
+        _timer.visible = false;
+        Game.Instance.CleanRenderTexture();
+    }
+
+    public void DisableScore()
+    {
+        _scorePlayer1.visible = false;
+        _scorePlayer2.visible = false;
+        Game.Instance.CleanRenderTexture();
     }
 }

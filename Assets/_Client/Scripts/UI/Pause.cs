@@ -38,8 +38,8 @@ public class Pause : UIElement
     {
         _onPause = false;
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         _gameUI.Open();
     }
 

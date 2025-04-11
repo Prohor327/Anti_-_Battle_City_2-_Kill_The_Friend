@@ -96,7 +96,6 @@ public class LevelUpUI : UIElement
 
     private void UnsubscribeLvlUpButtons()
     {
-        print("000");
         _abillityButtons[0].clicked -= () => OnButtonPressed(_abillityButtons[0]);
         _abillityButtons[1].clicked -= () => OnButtonPressed(_abillityButtons[1]);
         _abillityButtons[2].clicked -= () => OnButtonPressed(_abillityButtons[2]);
@@ -116,6 +115,7 @@ public class LevelUpUI : UIElement
             break;
             case AbillityType.HPUp:
                 _currentPlayer.health.ImproveMaxHealth(abillitySO.value);
+                _currentPlayer.health.Heal(2000000);
             break;
             case AbillityType.ProjectileSpeedUp:
                 _currentPlayer.speedProjectile += abillitySO.value;
@@ -124,13 +124,5 @@ public class LevelUpUI : UIElement
         _i++;
         Close();
         gameUI.Open();
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            Open(1);
-        }   
     }
 }

@@ -15,3 +15,9 @@ public enum AbillityType
     SpeedUp,
     ProjectileSpeedUp
 }
+
+public enum PlayMode
+{
+    Conf, 
+    Base
+}

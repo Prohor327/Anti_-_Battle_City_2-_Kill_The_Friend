@@ -22,10 +22,10 @@ public class GameMachine
         Game.Instance.CleanRenderTexture();
     }
 
-    public void LoadLevel()
+    public void LoadLevel(string name)
     {
         Game.print("Game Machine Is Loading Level");
-        Game.Instance.scenesOpener.LoadLevel();
+        Game.Instance.scenesOpener.LoadLevel(name);
         OnLoadedLevel?.Invoke();
         state = GameState.Game;
     }

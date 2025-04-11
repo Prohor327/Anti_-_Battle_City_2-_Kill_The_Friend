@@ -18,7 +18,7 @@ public class RoundManager : MonoBehaviour
     private void Start() 
     {
         Game.Instance.roundManager = this;
-        _currentTime = _roundTime;    
+        _currentTime = _roundTime;   
         Game.Instance.UIManager.gameUI.UpdateScore(_player1Count, _player2Count);
     }
 
@@ -42,7 +42,6 @@ public class RoundManager : MonoBehaviour
 
         if(_count >= 3.5)
         {
-            Game.Instance.OnStartRound?.Invoke();
             _count = 0;
         }
 
@@ -54,7 +53,25 @@ public class RoundManager : MonoBehaviour
 
     private void TimeRunOut()
     {
-        
+        if(Game.Instance.player1.health.health == Game.Instance.player2.health.health)
+        {
+            Game.Instance.UIManager.gameUI.ThrowMessageOnCenterScreen("Draw", 1.5f);
+            Destroy(Game.Instance.player1.gameObject);
+            Destroy(Game.Instance.player2.gameObject);
+            for(int i = 0; i < _playerSpawners.Length; i++)
+            {
+                _playerSpawners[i].SpawnNewPlayer();
+            }
+            _currentTime = _roundTime;
+        }
+        if(Game.Instance.player1.health.health < Game.Instance.player2.health.health)
+        {
+            EndRound(2);
+        }
+        else if(Game.Instance.player1.health.health > Game.Instance.player2.health.health)
+        {
+            EndRound(1);
+        }
     }
 
     public void EndRound(int playerId)
@@ -62,10 +79,12 @@ public class RoundManager : MonoBehaviour
         if(playerId == 1)
         {
             _player1Count++;
+            Game.Instance.UIManager.gameUI.ThrowMessageOnCenterScreen("Player 1 won", 1.5f);
         }
         else
         {   
             _player2Count++;
+            Game.Instance.UIManager.gameUI.ThrowMessageOnCenterScreen("Player 2 won", 1.5f);
         }
         Game.Instance.UIManager.gameUI.UpdateScore(_player1Count, _player2Count);
         Destroy(Game.Instance.player1.gameObject);
@@ -74,6 +93,7 @@ public class RoundManager : MonoBehaviour
         {
             _playerSpawners[i].SpawnNewPlayer();
         }
+        _currentTime = _roundTime;
     }
 
     private void OnDestroy()

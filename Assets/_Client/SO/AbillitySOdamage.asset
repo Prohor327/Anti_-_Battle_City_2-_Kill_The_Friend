@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AbillitySOdamage
   m_EditorClassIdentifier: 
   <abillityType>k__BackingField: 1
-  <value>k__BackingField: 10
+  <value>k__BackingField: 5
   <description>k__BackingField: Damage Up
   <texture>k__BackingField: {fileID: 2800000, guid: 27b35aae57cc53c47ba65468f66b5bae, type: 3}

@@ -42,6 +42,10 @@ public class Projectile : MonoBehaviour
         {
             unit.TakeDamege(_damage);
         }
+        if(collision.TryGetComponent<Base>(out Base playerBase))
+        {
+            playerBase.Die();
+        }
         Destroy(gameObject);
     }
 

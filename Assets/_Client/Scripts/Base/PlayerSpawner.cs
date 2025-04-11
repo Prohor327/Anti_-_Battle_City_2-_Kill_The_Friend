@@ -19,6 +19,7 @@ public class PlayerSpawner : TankSpawner
     {
         Player player = Instantiate(_player, transform.position, transform.rotation);
         player.Initialize(_playerId);
+        player.playerSpawner = this;
     }
 
     public void SpawnNewPlayer()

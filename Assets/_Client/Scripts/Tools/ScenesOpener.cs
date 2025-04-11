@@ -18,8 +18,8 @@ public class ScenesOpener
         SceneManager.LoadScene(Consts.MENU_SCENE_NAME);
     }
 
-    public void LoadLevel()
+    public void LoadLevel(string name)
     {
-        SceneManager.LoadScene(Consts.LEVEL01_SCENE_NAME);
+        SceneManager.LoadScene(name);
     }
 }

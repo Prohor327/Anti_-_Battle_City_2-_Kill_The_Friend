@@ -1,16 +1,16 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
-    <engine:VisualElement style="flex-grow: 1; background-color: rgba(101, 101, 101, 0); height: 584px; width: 860px; position: absolute; align-items: center; justify-content: flex-start; align-self: center; top: 326px; left: 553px; background-image: url(&quot;project://database/Assets/_Client/Sprites/Pause%20Background.png?fileID=2800000&amp;guid=c6a93f5a560cf2a428ea4be71cf44619&amp;type=3#Pause Background&quot;);">
-        <engine:Label text="Pause" class="text" style="-unity-font-definition: url(&quot;project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&amp;guid=2fd9899cb5d228e47b12453ed5c2a2af&amp;type=3#better-vcr4.0&quot;); -unity-text-align: middle-center; white-space: pre-wrap; font-size: 47px; top: 21px; color: rgb(255, 255, 255); left: 0;" />
-        <engine:Button name="Continue" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: absolute; top: 166px; left: 190px; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgba(101, 101, 101, 0); height: 960px; width: 860px; position: absolute; align-items: center; justify-content: space-between; align-self: center; top: -28px; left: auto; background-image: url(&quot;project://database/Assets/_Client/Sprites/Pause%20Background.png?fileID=2800000&amp;guid=c6a93f5a560cf2a428ea4be71cf44619&amp;type=3#Pause Background&quot;); right: auto; bottom: auto;">
+        <engine:Button name="Continue" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: absolute; top: 296px; left: 190px; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
             <engine:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus">
                 <engine:Label text="Continue" name="Label" class="text" style="position: absolute; top: 11px; left: 172px; height: 117px; width: 429px;" />
             </engine:VisualElement>
         </engine:Button>
-        <engine:Button name="Exit" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: absolute; top: 358px; left: 190px; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
+        <engine:Button name="Exit" class="menuButton buttonBackround buttonBackroundFocus buttonBackroundHover" style="width: 460px; position: absolute; top: 529px; left: 190px; overflow: visible; color: rgb(255, 255, 255); -unity-text-align: middle-center;">
             <engine:VisualElement name="VisualElement" class="menuButtonAnimation menuButtonAnimation1 menuButtonFocus">
                 <engine:Label text="Exit to menu" name="Label" class="text" style="position: absolute; top: 11px; left: 172px; height: 117px; width: 429px;" />
             </engine:VisualElement>
         </engine:Button>
+        <engine:Label text="Pause" class="text" style="-unity-font-definition: url(&quot;project://database/Assets/_Client/Fonts/better-vcr4.0.ttf?fileID=12800000&amp;guid=2fd9899cb5d228e47b12453ed5c2a2af&amp;type=3#better-vcr4.0&quot;); -unity-text-align: middle-center; white-space: pre-wrap; font-size: 62px; top: 64px; color: rgb(255, 247, 0); left: 0; -unity-background-image-tint-color: rgb(255, 250, 0);" />
     </engine:VisualElement>
 </engine:UXML>
