@@ -293,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _asset: {fileID: 9197481963319205126, guid: aa5e3d119d9a5cc47b01f4b6bf542133, type: 3}
   _buttonPressed: {fileID: 8300000, guid: 922724644fc4ebb43b1b340e62012459, type: 3}
+  _moveCardAsset: {fileID: 9197481963319205126, guid: 30952f9859c4bca4484811ec6fb14367, type: 3}
 --- !u!82 &757681330
 AudioSource:
   m_ObjectHideFlags: 0

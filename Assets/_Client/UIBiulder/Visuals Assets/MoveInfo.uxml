@@ -1,0 +1,19 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Client/UIBiulder/Stiles/menuButtonStile.uss?fileID=7433441132597879392&amp;guid=345cb6d5a3b45374c8fa2e4b9207e9ba&amp;type=3#menuButtonStile" />
+    <engine:VisualElement style="flex-grow: 1; position: absolute; width: 1920px; height: 1080px; background-image: url(&quot;project://database/Assets/_Client/Sprites/Menu%20Background.png?fileID=2800000&amp;guid=5da44dd0041a3404c81682d63659ed0b&amp;type=3#Menu Background&quot;);">
+        <engine:Label text="Player 1" class="text" style="width: 792px; top: 50px; color: rgb(255, 249, 0);" />
+        <engine:Label text="Player 2" class="text" style="width: 792px; top: 50px; position: absolute; left: 1094px; color: rgb(5, 173, 4);" />
+        <engine:VisualElement style="flex-grow: 1; position: absolute; height: 244px; width: 404px; background-image: url(&quot;project://database/Assets/_Client/Sprites/0001.png?fileID=2800000&amp;guid=76966447b2c538a4599b78be676c73c4&amp;type=3#0001&quot;); top: 256px; left: 260px;">
+            <engine:Label text="W" class="text" style="position: absolute; width: 90px; left: 154px; height: 84px; top: 19px; font-size: 79px;" />
+            <engine:Label text="A" class="text" style="position: absolute; width: 90px; left: 18px; height: 84px; top: 147px; font-size: 79px;" />
+            <engine:Label text="S" class="text" style="position: absolute; width: 90px; left: 154px; height: 84px; top: 146px; font-size: 79px;" />
+            <engine:Label text="D" class="text" style="position: absolute; width: 90px; left: 290px; height: 84px; top: 143px; font-size: 79px;" />
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; position: absolute; height: 244px; width: 404px; background-image: url(&quot;project://database/Assets/_Client/Sprites/0002.png?fileID=2800000&amp;guid=956b56c7c59d4584a8721d9dfd508b5f&amp;type=3#0002&quot;); top: 260px; left: 1300px;" />
+        <engine:Label text="Shoot" class="text" style="position: absolute; top: 536px; left: 854px;" />
+        <engine:Label text="Move" class="text" style="position: absolute; top: 162px; left: 855px;" />
+        <engine:Label text="Spase" class="text" style="position: absolute; top: 666px; left: 362px;" />
+        <engine:Label text="Enter" class="text" style="position: absolute; top: 678px; left: 1383px;" />
+        <engine:Button text="Exit" name="Exit" class="buttonBackround buttonBackroundHover buttonBackroundFocus text" style="position: absolute; top: 848px; left: 744px; width: 504px; height: 169px;" />
+    </engine:VisualElement>
+</engine:UXML>

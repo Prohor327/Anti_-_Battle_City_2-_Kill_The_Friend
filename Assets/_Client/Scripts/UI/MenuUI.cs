@@ -7,6 +7,7 @@ using Cursor = UnityEngine.Cursor;
 public class MenuUI : UIElement
 {
     [SerializeField] private AudioClip _buttonPressed;
+    [SerializeField] private VisualTreeAsset _moveCardAsset;
 
     private AudioSource _audioSource;
 
@@ -14,23 +15,30 @@ public class MenuUI : UIElement
 
     private VisualElement _buttonCont2;
     private VisualElement _chooseMapCont;
+    private VisualElement _moveCard;
 
     private PlayMode _playMode;
+
+    private bool _onVolume;
 
     protected override void Initialize()
     {
         base.Initialize();
         _audioSource = GetComponent<AudioSource>();
         _fader = GetComponent<Fader>();
+        _moveCard = _moveCardAsset.CloneTree();
 
         _buttonCont2 = _UIElement.Q<VisualElement>("ButtonsCotext2");
         _chooseMapCont = _UIElement.Q<VisualElement>("ChoosePanel");
         Button play = _UIElement.Q<Button>("Play");
         Button exit = _UIElement.Q<Button>("Exit");
+        Button move = _UIElement.Q<Button>("Move");
+        Button Exit = _moveCard.Q<Button>("Exit");
 
         Button map1 = _UIElement.Q<Button>("1");
         Button map2 = _UIElement.Q<Button>("2");
         Button map3 = _UIElement.Q<Button>("3");
+
 
         Button confrontation = _UIElement.Q<Button>("Confrontation");
         Button baseButton = _UIElement.Q<Button>("Base");
@@ -45,6 +53,9 @@ public class MenuUI : UIElement
             SoundPlay();
             Application.Quit();
         };
+        move.clicked += OpenMoveCard;
+        Exit.clicked += CloseMoveCard;
+
 
         confrontation.clicked += () =>
         {
@@ -91,7 +102,7 @@ public class MenuUI : UIElement
             switch (indexMap)
             {
                 case 1:
-                    StartGame(Consts.CONF01_SCENE_NAME);
+                    StartGame("Conf01");
                     break;
                 case 2:
                     StartGame("Conf02");
@@ -125,5 +136,14 @@ public class MenuUI : UIElement
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         _fader.OnFaded += () => Game.Instance.gameMachine.LoadLevel(consts.ToString());
+    }
+
+    private void OpenMoveCard()
+    {
+        _UIElement.Add(_moveCard);
+    }
+    private void CloseMoveCard()
+    {
+        _UIElement.Remove(_moveCard);
     }
 }
