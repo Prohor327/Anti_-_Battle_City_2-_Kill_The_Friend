@@ -55,7 +55,7 @@ public class MenuUI : UIElement
         baseButton.clicked += () =>
         {
             _playMode = PlayMode.Base;
-            _chooseMapCont.visible = false;
+            _chooseMapCont.visible = true;
         };
 
         map1.clicked += () => ChooseMap(1);
@@ -94,8 +94,10 @@ public class MenuUI : UIElement
                     StartGame(Consts.CONF01_SCENE_NAME);
                     break;
                 case 2:
+                    StartGame("Conf02");
                     break;
                 case 3:
+                    StartGame("Conf03");
                     break;
             }
         }
@@ -104,11 +106,13 @@ public class MenuUI : UIElement
             switch (indexMap)
             {
                 case 1:
-                    StartGame(Consts.BASE01_SCENE_NAME);
+                    StartGame("Base01");
                     break;
                 case 2:
+                    StartGame("Base02");
                     break;
                 case 3:
+                    StartGame("Base03");
                     break;
             }
         }
